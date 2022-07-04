@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../SF_Pro_Display/SFPRODISPLAYREGULAR.woff') format("woff"),
+         url('../SF_Pro_Display/SFPRODISPLAYREGULAR.ttf') format("truetype"),
+         url('../SF_Pro_Display/SFPRODISPLAYREGULAR.eot') format("embedded-opentype");
+  }
+
+body{
+    /*測試毛玻璃效果 感覺可以在霧一點？*/
+         
+    background-image: url("https://gw.alicdn.com/imgextra/i1/1969608224/TB2xIp9xAKWBuNjy1zjXXcOypXa_!!1969608224.jpg_Q75.jpg_.webp");
+    
+}
+
+i{
+    color: #FFFFFF;
+}
+
+
+p{
+    font-family: 'SF Pro Display';
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin: 0;
+}
+
+blue-text{
+    color: #A9EEFD;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 26px;
+}
+
+.card_a{
+    box-sizing: border-box;
+    margin: 26px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    /* width: 322px; */
+
+    background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+    filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(80px);
+    box-shadow: 0px 0px 28px 0px #00000080;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+
+    /*方法1 會吃到下面那層的顏色*/
+    /* border: 1px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: 
+    linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%), 
+    linear-gradient(122.8deg, #FFFFFF -12.64%, rgba(255, 255, 255, 0) 123.49%); */
+
+    /*方法2 編框的角會被吃掉*/
+    /*background-image: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+    border: 1px solid;
+    border-image: linear-gradient(122.8deg, #FFFFFF -12.64%, rgba(255, 255, 255, 0) 123.49%)1;
+    clip-path: inset(0 round 15px) ; */
+}
+
+.card_a_show{
+    padding: 30px;
+}
+
+.card_a_close{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 322px; */
+    padding: 30px;
+}
+
+#card_a_btn_close{
+    display: none;
+}
+
+#card_a_content{
+    display: none;
+    padding: 0 30px 30px 30px;
+}
+
+.card_a2{
+    box-sizing: border-box;
+    margin: 26px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 30px;
+
+    background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+    filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(80px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+}
+
+.card_a2_content{
+    margin-top: 10px;
+}
+
+.card_b{
+    box-sizing: border-box;
+    margin: 26px 0;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    
+    padding: 30px;
+    gap: 14px;
+
+    /* width: 304px; */
+
+    background: rgba(217, 217, 217, 0.3);
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25), inset 0px 0.5px 1px rgba(87, 90, 148, 0.1);
+    backdrop-filter: blur(80px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+}
+
+.card_c{
+    box-sizing: border-box;
+    margin: 26px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px 30px;
+    gap: 30px;
+
+    background: linear-gradient(340.89deg, rgba(131, 85, 207, 0.3) -4.02%, rgba(217, 217, 217, 0) 200.89%);
+    filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(80px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+}
+
+.gray_background{
+    background: rgba(217, 217, 217, 0.3);
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25), inset 0px 0.5px 1px rgba(87, 90, 148, 0.1);
+    backdrop-filter: blur(80px);
+}
+
+.yellow_background{
+    background: linear-gradient(326.76deg, rgba(240, 212, 115, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+    filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(80px);
+}
+
+.card_d{
+    display: flex;
+    margin: 26px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 24px;
+    gap: 10px;
+
+    background: linear-gradient(162.09deg, rgba(246, 255, 242, 0.201) 8.88%, rgba(217, 217, 217, 0.3) 115.96%);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(80px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card_d_img{
+    width: 115px;
+    height: 113px;
+
+    background: #827F7F;
+    border-radius: 8px;
+
+    margin-bottom: 6px;
+}
+
+.card_f{
+    display: flex;
+    margin: 26px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/*沒有給btn大小，這邊先自行設定*/
+.cta_btn{
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    
+    width: 150px;
+    height: 50px;
+    border: 0;
+    border-radius: 75px;
+    
+    background: linear-gradient(241.1deg, #AF57DC 32.22%, #7B78E2 87.94%);
+    box-shadow: 0px 5px 41px rgba(0, 0, 0, 0.25), inset 0px 4px 204px rgba(255, 255, 255, 0.5);
+}
+
+.card_g{
+    box-sizing: border-box;
+    margin: 26px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 25px;
+        
+    background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+    filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(80px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+}
+
+.card_g_content{
+    margin-top: 29px;
+}
+
+.card_g_img{
+    width: 255px;
+    height: 196px;
+
+    background: #FFFFFF;
+}
