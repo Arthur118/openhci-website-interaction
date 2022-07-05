@@ -71,48 +71,29 @@ const scheduleInfo = {
 function schedule_information_insertion() {
     const scheduleSection = document.querySelector("#schedule .box");
     let workshop = "";
-    scheduleInfo["前置工作坊"].forEach((schedule, idx) => {
-        let content = `<div class="card_b">
-                            <card-title>
-                                <t-24>前置工作坊</t-24>
-                                <br>
-                                <t-24><blue-text> Day${idx+1} </blue-text></t-24>
-                            </card-title>`;
-        let index = 1;
-        for (const [key, value] of Object.entries(schedule)) {
-            content += `<div class="schedule-text">
-                            <div class="left-text">${key}</div>  
-                            <div class="right-text">${value}</div>
-                        </div>`;
-            if (index < Object.entries(schedule).length) {
-                content += "<white-line></white-line>";
-                index += 1;
+    for (const [key, value] of Object.entries(scheduleInfo)) {
+        value.forEach((schedule, idx) => {
+            let content = `<div class="card_b">
+                                <card-title>
+                                    <t-24>${key}</t-24>
+                                    <br>
+                                    <t-24><blue-text> Day${idx+1} </blue-text></t-24>
+                                </card-title>`;
+            let index = 1;
+            for (const [key, value] of Object.entries(schedule)) {
+                content += `<div class="schedule-text">
+                                <div class="left-text">${key}</div>  
+                                <div class="right-text">${value}</div>
+                            </div>`;
+                if (index < Object.entries(schedule).length) {
+                    content += "<white-line></white-line>";
+                    index += 1;
+                }
             }
-        }
-        content += `</div>`;
-        workshop += content;
-    })
-    scheduleInfo["正式工作坊"].forEach((schedule, idx) => {
-        let content = `<div class="card_b">
-                            <card-title>
-                                <t-24>正式工作坊</t-24>
-                                <br>
-                                <t-24><blue-text> Day${idx+1} </blue-text></t-24>
-                            </card-title>`;
-        let index = 1;
-        for (const [key, value] of Object.entries(schedule)) {
-            content += `<div class="schedule-text">
-                            <div class="left-text">${key}</div>  
-                            <div class="right-text">${value}</div>
-                        </div>`;
-            if (index < Object.entries(schedule).length) {
-                content += "<white-line></white-line>";
-                index += 1;
-            }
-        }
-        content += `</div>`;
-        workshop += content;
-    })
+            content += `</div>`;
+            workshop += content;
+        })
+    }
     scheduleSection.insertAdjacentHTML("beforeend", workshop);
 }
 schedule_information_insertion();
