@@ -14,6 +14,7 @@ body {
 
 /* 按鈕用 */
 i {
+  font-size: larger;
   color: #FFFFFF;
 }
 
@@ -87,6 +88,21 @@ card-title t-24 {
   float: right;
   text-align: right;
 }
+#schedule .box{
+  margin-right: 0;
+}
+.schedule_box{
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.schedule_box::-webkit-scrollbar
+{
+	width: 0px;
+}
 
 /* 行事曆用白色分隔線 */
 white-line {
@@ -112,19 +128,6 @@ white-line {
   box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.5019607843);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
-  /*方法1 會吃到下面那層的顏色*/
-  /* border: 1px solid transparent;
-  border-radius: 16px;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
-  background-image: 
-  linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%), 
-  linear-gradient(122.8deg, #FFFFFF -12.64%, rgba(255, 255, 255, 0) 123.49%); */
-  /*方法2 編框的角會被吃掉*/
-  /*background-image: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
-  border: 1px solid;
-  border-image: linear-gradient(122.8deg, #FFFFFF -12.64%, rgba(255, 255, 255, 0) 123.49%)1;
-  clip-path: inset(0 round 15px) ; */
 }
 
 /* 這格是我要寫普通顯示不受按鈕影響的地方 */
@@ -132,22 +135,42 @@ white-line {
   padding: 30px;
 }
 
+.panel-collapse {
+  margin: 0 30px 30px;
+}
+
 .card_a_close {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* width: 322px; */
+  width: 80vw;
   padding: 30px;
+}
+.card_a_close i{
+  /* transition: all 0.5s; */
+}
+.card_a_close.active i{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+} 
+.card_a_close.active card-title{
+  color: #56FAFB;
+}
+.card_a_close.active p{
+  display: none;
+}
+
+#FAQ .card_a_close{
+  flex-direction: row-reverse;
+}
+#FAQ .panel-collapse {
+  margin: 0 30px;
 }
 
 #card_a_btn_close {
   display: none;
-}
-
-#card_a_content {
-  display: none;
-  padding: 0 30px 30px 30px;
 }
 
 .card_a2 {
@@ -185,6 +208,12 @@ white-line {
           backdrop-filter: blur(80px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
+
+  width: max(70vw);
+  /* Choose how to align children on scroll */
+  scroll-snap-align: center;
+  /* Prevents scrolling past more than one child */
+  scroll-snap-stop: always;
 }
 
 .card_c {
