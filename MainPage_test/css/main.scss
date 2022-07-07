@@ -14,8 +14,18 @@ body{
     background-image: url("https://gw.alicdn.com/imgextra/i1/1969608224/TB2xIp9xAKWBuNjy1zjXXcOypXa_!!1969608224.jpg_Q75.jpg_.webp");
 }
 
+@media (min-width: 768px) {
+    .box {
+        width: 60%;
+        max-width: 800px;
+        align-self: flex-end;
+        float: right;
+    }
+}
+
 /* 按鈕用 */
 i{
+    font-size: larger;
     color: #FFFFFF;
 }
 
@@ -27,7 +37,7 @@ p{
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 2;
     text-align: left;
     margin: 0;
 }
@@ -47,10 +57,14 @@ blue-text{
     .box-title{
        font-weight: 400;
        font-size: 32px;
-       line-height: 24px;
+       line-height: 1.2;
        letter-spacing: -0.011em;
        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
        margin-bottom: 7px;
+    }
+    .t-24{
+        font-size: 24px;
+        margin-top: 16px;
     }
 }
 
@@ -96,12 +110,40 @@ card-title{
     }
 }
 
+#schedule .box{
+    margin-right: 0;
+}
+.schedule_box{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 0%;
+}
+.schedule_box::-webkit-scrollbar
+{
+      width: 0px;
+}
+
 /* 行事曆用白色分隔線 */
 white-line{
     border-top: 1px solid #FFFFFF;
     width: 100%;
     margin: 0%;
     align-self: center;
+}
+
+
+.group_member{
+    padding-top: 24px;
+    width: 100%;
+    
+    line-height: 2;
+
+    display: flex;
+    align-items: center;
 }
 
 /* ----- 卡片設定區域 ----- */
@@ -111,6 +153,7 @@ white-line{
 .card_a{
     box-sizing: border-box;
     margin: 26px 0;
+    padding-inline: 10px;
 
     display: flex;
     flex-direction: column;
@@ -125,45 +168,55 @@ white-line{
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 16px;
-
-    /*方法1 會吃到下面那層的顏色*/
-    /* border: 1px solid transparent;
-    border-radius: 16px;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    background-image: 
-    linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%), 
-    linear-gradient(122.8deg, #FFFFFF -12.64%, rgba(255, 255, 255, 0) 123.49%); */
-
-    /*方法2 編框的角會被吃掉*/
-    /*background-image: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
-    border: 1px solid;
-    border-image: linear-gradient(122.8deg, #FFFFFF -12.64%, rgba(255, 255, 255, 0) 123.49%)1;
-    clip-path: inset(0 round 15px) ; */
 }
 
- /* 這格是我要寫普通顯示不受按鈕影響的地方 */
-.card_a_show{
+.panel-collapse {
+    margin: 0 30px 30px;
+  }
+  
+
+ /* 普通顯示不受按鈕影響的地方 */
+.card_a_show {
     padding: 30px;
-}
+  }
 
-.card_a_close{
+/* TODO: 按鈕移位 修正 */
+.card_a_close {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* width: 322px; */
     padding: 30px;
-}
-
-#card_a_btn_close{
+    position: relative;
+  }
+  
+  .card_a_close i {
+     transition: all 0.5s;
+  }
+  
+  .card_a_close.active i {
+    transform: rotate(180deg);
+  }
+  
+  .card_a_close.active card-title {
+    color: #56FAFB;
+  }
+  
+  .card_a_close.active p {
     display: none;
-}
-
-#card_a_content{
+  }
+  
+  #FAQ .card_a_close {
+    flex-direction: row-reverse;
+  }
+  
+  #FAQ .panel-collapse {
+    margin: 0 30px;
+  }
+  
+  #card_a_btn_close {
     display: none;
-    padding: 0 30px 30px 30px;
-}
+  }
 
 .card_a2{
     box-sizing: border-box;
@@ -206,6 +259,11 @@ white-line{
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
+    width: max(70vw);
+    /* Choose how to align children on scroll */
+    scroll-snap-align: center;
+    /* Prevents scrolling past more than one child */
+    scroll-snap-stop: always;
 }
 
 .card_c{
@@ -287,7 +345,7 @@ white-line{
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: flex-start; */
     padding: 25px;
         
     background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
@@ -303,10 +361,10 @@ white-line{
 }
 
 .card_g_img{
-    width: 255px;
-    height: 196px;
-
+    width: 80%;
+    height: auto;
     background: #FFFFFF;
+    margin-bottom: 29px;
 }
 
 /* 要換背景顏色的話直接加這個 */
@@ -322,7 +380,11 @@ white-line{
     backdrop-filter: blur(80px);
 }
 
-
+.blue_background{
+    background: linear-gradient(340.89deg, rgba(12, 80, 148, 0.3) -4.02%, rgba(217, 217, 217, 0) 200.89%);
+    filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(80px);
+}
 
 
 /* 最上面的logo 測試用而已還沒放 */
@@ -330,4 +392,18 @@ white-line{
     width: 60%;
     padding: 20px;
     float: right;
+}
+
+.link-light{
+    color: #FFFFFF;
+}
+
+.logo{
+    margin: 50px;
+    max-width: 100%;
+    height: auto;
+}
+
+.contant{
+    text-align: center;
 }

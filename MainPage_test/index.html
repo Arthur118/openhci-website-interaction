@@ -14,13 +14,43 @@
     </head>
 
     <body>
-        <!-- section home 
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">HOME</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#theme">關於HCI</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#workshop">工作坊介紹</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Apply">報名方式</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#FAQ">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#TAICHI">TAICHI合作</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Group">團隊</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <!-- section home-->  
         <section id = "home">
-            <div class = "title">
-                <img src="image/title.png" class="home-title">
+            <div class = "box">
+                <div class="box-title">這裡是主視覺～～～～～</div>
             </div>
         </section>
-        -->
 
         <!-- section theme-->
         <section id = "theme">
@@ -105,7 +135,7 @@
             <div class= "box">
                 <div class="box-title">Program</div>
                 <div class="box-title">簡易日程表</div>
-                <div class="schedule_box"></div>
+                <div class="schedule_box"></div> <!-- 位移待修正 -->
                 <nav id="schedule_nav"></nav>
             </div>
         </section>
@@ -314,7 +344,7 @@
                     </div>
                     <div class="card_a_close">
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_報名資訊" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
-                        <p role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard" aria-expanded="true" aria-controls="collapse_IDCard">查看更多</p>
+                        <p role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard" aria-expanded="true" aria-controls="collapse_IDCard">查看更多...</p>
                     </div>
                 </div>
                 <!--ID CARD-->
@@ -330,23 +360,23 @@
                     </div>
                     <div id="collapse_IDCard" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <p>
-                            Q2 : 活動期間某些時段無法參加，可以請假嗎？<br>
+                            Q2 : ID Card 的一頁作品集可以放什麼？<br>
                             <blue-text>
-                                A2 : 可以在報名表單中填寫請假時段，但建議全程參與前置與正式工作坊，出席狀況會是我們審核的標準之一。
+                                A2 : 無論你來自什麼背景，<br>
+                                請選擇「一」個你最滿意、最喜歡且足以代表你專業能力的作品來進行介紹，
+                                而這個作品可以是研究、專題或設計。
                             </blue-text>
                         </p><br>
                         <p>
-                            Q3 : 工作坊的時間怎麼安排？<br>
+                            Q3 : 對IDCard第三頁中要回答的內容還是沒什麼想法怎麼辦？<br>
                             <blue-text>
-                                A3 : 活動時間分為兩個階段，包含2天的前置工作坊，和3天的正式工作坊。<br>
-                                每日活動開始時間皆為08:30，結束時間為21:00 - 21:30。
+                                A3 : 可以多留意生活周遭的事物與經驗來發想，還有敬請期待歷屆學員分享的內容！
                             </blue-text>
                         </p><br>
                         <p>
-                            Q4 :疫情會影響活動的舉行嗎？<br>
+                            Q4 : IDCard內作品的相關隱私規範？<br>
                             <blue-text>
-                                A4 :目前為正常舉辦，<br>
-                                不過我們會根據北北基案例個數及臺北市政府對群聚活動的限制，決定是否線上舉辦或停辦。
+                                A4 : 上傳作品集僅供主辦團隊內部審核。
                             </blue-text>
                         </p>
                     </div>
@@ -370,10 +400,19 @@
                         <card-title id="card_a_title"><t-24>COORDINATOR<t-24></card-title>
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_Group" aria-expanded="true" aria-controls="collapse_Group"></i>
                     </div>
-                    <div id="collapse_Group" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                        </p>
+                    <div id="collapse_Group" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="width: 100%;">
+                        <div class="row group_member">
+                            <div class="col-8 col-md-4">
+                                <p><b style="font-size: 18px;">陳昱安</b><br>國立政治大學<br>數位內容碩士學位學程</p>
+                            </div>
+                            <div class="col-8 col-md-4">
+                                <p><b style="font-size: 18px;">洪揚</b><br>國立陽明交通大學<br>傳播與科技學系</p>
+                            </div>
+                            <div class="col-8 col-md-4">
+                                <p><b style="font-size: 18px;">巫芊瑩</b><br>國立台灣大學<br>資訊管理學系</p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -414,6 +453,116 @@
                 </div>
 
             </div>
+        </section>
+
+        <!-- section Previous -->
+        <section id = "Previous">
+            <div class= "box">
+                <div class="box-title">Previous Works</div>
+                <div class="box-title t-24">歷屆作品</div>
+                <div class="row justify-content-around">
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work1.png">
+                        <card-title><t-24>時光雞</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title> 
+                    </div>
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work2.png">
+                        <card-title><t-24>蒲呼呼</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title> 
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work3.png">
+                        <card-title><t-24>READEE</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title>
+                    </div>
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work4.png">
+                        <card-title><t-24>尋找湖泊</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work5.png">
+                        <card-title><t-24>memoscape.</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title>
+                    </div>
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work6.png">
+                        <card-title><t-24>Walking Workie</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work7.png">
+                        <card-title><t-24>氛享</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title>
+                    </div>
+                    <div class="col-10 col-md-5 card_g">
+                        <img class="card_g_img" src="image/work8.png">
+                        <card-title><t-24>憶起亂掰</t-24></card-title>
+                        <card-title style="font-size: 18px;">最佳整體獎</card-title>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- section organizer -->
+        <section id = "organizer">
+            <div class= "box">
+                <div class="box-title">Organizers</div>
+                <div class="box-title t-24">籌辦單位</div>
+                <!-- IMAGE HERE-->
+            </div>
+
+            <div class= "box">
+                <div class="box-title">Co-organizers</div>
+                <div class="box-title t-24">協辦單位</div>
+                <!-- IMAGE HERE-->
+            </div>
+        </section>
+
+        <!-- section Sponsors -->
+        <section id = "Sponsors">
+            <div class= "box">
+                <div class="box-title">Sponsors</div>
+                <div class="box-title t-24">贊助單位</div>
+                <!-- IMAGE HERE-->
+            </div>
+        </section>
+
+        <!-- section contant -->
+        <section id = "contant">
+            <div class= "box contant">
+                <img src="image/logo.png" class="logo">
+                <p style="text-align: center;">
+                    OPEN HCI<br>
+                    <a href="https://www.2021.openhci.com/" class="link-light">2021</a> | 
+                    <a href="https://www.2019.openhci.com/" class="link-light">2019</a> | 
+                    <a href="https://www.2018.openhci.com/" class="link-light">2018</a> | 
+                    <a href="https://www.2017.openhci.com/" class="link-light">2017</a> |<br> 
+                    <a href="https://www.2016.openhci.com/" class="link-light">2016</a> | 
+                    <a href="https://www.2015.openhci.com/" class="link-light">2015</a> | 
+                    <a href="https://www.2014.openhci.com/" class="link-light">2014</a> | 
+                    <a href="https://www.2013.openhci.com/" class="link-light">2013</a> |<br>
+                    <a href="https://www.2012.openhci.com/" class="link-light">2012</a> | 
+                    <a href="https://www.2011.openhci.com/" class="link-light">2011</a> | 
+                    <a href="https://www.2009.openhci.com/" class="link-light">2009</a>
+                    <br><br>
+                    @COPYRIGHT 2022 OPEN HCI
+                </p>
+                <div style="margin-top: 20px; text-align: center;">
+                    <a href="#" style="margin: 10px;"><img src="image/YouTube.png"></a>
+                    <a href="#" style="margin: 10px;"><img src="image/Facebook F.png"></a>
+                </div>
+                <br>
+                <a href="mailto: program@openhci.com" class="link-light">program@openhci.com</a>
+            </div>>
         </section>
         
         <script src="js/main.js"></script>
