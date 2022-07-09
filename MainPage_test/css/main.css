@@ -4,6 +4,7 @@
   font-family: "SF Pro Display";
   src: url("../SF_Pro_Display/SFPRODISPLAYREGULAR.woff") format("woff"), url("../SF_Pro_Display/SFPRODISPLAYREGULAR.ttf") format("truetype"), url("../SF_Pro_Display/SFPRODISPLAYREGULAR.eot") format("embedded-opentype");
 }
+
 body {
   background-color: #1E1E1E;
   display: flex;
@@ -12,17 +13,6 @@ body {
   background-image: url("https://gw.alicdn.com/imgextra/i1/1969608224/TB2xIp9xAKWBuNjy1zjXXcOypXa_!!1969608224.jpg_Q75.jpg_.webp");
 }
 
-@media (min-width: 768px) {
-  .box {
-    width: 60%;
-    max-width: 800px;
-    align-self: flex-end;
-    float: right;
-  }
-  #schedule .box {
-    width: 70%;
-  }
-}
 /* 按鈕用 */
 i {
   font-size: larger;
@@ -392,4 +382,23 @@ white-line {
   filter: blur(200px);
   backdrop-filter: blur(300px);
   z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .box {
+    width: 60%;
+    max-width: 800px;
+    align-self: flex-end;
+    float: right;
+  }
+  #schedule .box {
+    margin-right: 10%;
+  }
+  .card_b {
+    width: 60vw;
+    max-width: 800px;
+  }
+  #schedule .box {
+    margin-right: 10%;
+  }
 }
