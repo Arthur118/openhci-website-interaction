@@ -374,3 +374,25 @@ white-line {
 .contant {
   text-align: center;
 }/*# sourceMappingURL=main.css.map */
+
+/*沒有背景跟內文看不出效果＠＠*/
+.card_e{
+  display: flex;
+  flex-direction: column;
+  /* width: 648px;
+  height: 1312px; */
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  left: -170px;
+  top: 200px;
+  background: linear-gradient(180deg, rgba(187, 135, 252, 0.066) -15.55%, rgba(255, 255, 255, 0.03) 51.64%, rgba(255, 255, 255, 0) 152.86%);
+  filter: blur(200px);
+  backdrop-filter: blur(300px);
+  z-index: 0;
+}
+
+.box-test{
+  color: white;
+  z-index: 1;
+}
