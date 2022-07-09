@@ -19,6 +19,9 @@ body {
     align-self: flex-end;
     float: right;
   }
+  #schedule .box {
+    width: 70%;
+  }
 }
 /* 按鈕用 */
 i {
@@ -115,7 +118,6 @@ card-title t-24 {
   -webkit-overflow-scrolling: touch;
   margin: 0%;
 }
-
 .schedule_box::-webkit-scrollbar {
   width: 0px;
 }
@@ -237,7 +239,7 @@ white-line {
           backdrop-filter: blur(80px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
-  width: 70vw;
+  width: 78vw;
   /* Choose how to align children on scroll */
   scroll-snap-align: center;
   /* Prevents scrolling past more than one child */
@@ -390,9 +392,4 @@ white-line {
   filter: blur(200px);
   backdrop-filter: blur(300px);
   z-index: 0;
-}
-
-.box-test{
-  color: white;
-  z-index: 1;
 }
