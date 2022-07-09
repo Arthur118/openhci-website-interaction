@@ -112,6 +112,10 @@ card-title t-24 {
   width: 0px;
 }
 
+#speaker .box{
+  margin-right: 0;
+}
+
 /* 行事曆用白色分隔線 */
 white-line {
   border-top: 1px solid #FFFFFF;
@@ -138,13 +142,15 @@ white-line {
   flex-direction: column;
   align-items: flex-start;
   /* width: 322px; */
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter:blur(80px);
+  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
+  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
-  filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
-  box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.5019607843);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .panel-collapse {
@@ -202,12 +208,16 @@ white-line {
   align-items: flex-start;
   padding: 30px;
   gap: 30px;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter:blur(80px);
+  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
+  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
-  filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card_a2_content {
@@ -223,12 +233,17 @@ white-line {
   padding: 30px;
   gap: 14px;
   /* width: 304px; */
-  background: rgba(217, 217, 217, 0.3);
-  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25), inset 0px 0.5px 1px rgba(87, 90, 148, 0.1);
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter:blur(80px);
+  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
+  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+
+  background: linear-gradient(326.76deg, rgba(153, 174, 115, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
   width: 78vw;
   /* Choose how to align children on scroll */
   scroll-snap-align: center;
@@ -244,27 +259,43 @@ white-line {
   align-items: flex-start;
   padding: 40px 30px 30px;
   gap: 30px;
-  background: linear-gradient(340.89deg, rgba(131, 85, 207, 0.3) -4.02%, rgba(217, 217, 217, 0) 200.89%);
-  filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.25));
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter:blur(80px);
+  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
+  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+  background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card_d {
-  display: flex;
+  box-sizing: border-box;
   margin: 26px 0;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 24px;
-  gap: 10px;
-  background: linear-gradient(162.09deg, rgba(246, 255, 242, 0.201) 8.88%, rgba(217, 217, 217, 0.3) 115.96%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* align-items: flex-start; */
+  padding: 30px;
+  gap: 14px;
+  /* width: 304px; */
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter:blur(80px);
+  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
+  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+
+  background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  width: 78vw;
+  /* Choose how to align children on scroll */
+  scroll-snap-align: center;
+  /* Prevents scrolling past more than one child */
+  scroll-snap-stop: always;
 }
 
 .card_d_img {
@@ -305,12 +336,16 @@ white-line {
   flex-direction: column;
   /* align-items: flex-start; */
   padding: 25px;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter:blur(80px);
+  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
+  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
-  filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card_g_content {
@@ -328,22 +363,16 @@ white-line {
 .gray_background {
   background: rgba(217, 217, 217, 0.3);
   box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25), inset 0px 0.5px 1px rgba(87, 90, 148, 0.1);
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
 }
 
 .yellow_background {
   background: linear-gradient(326.76deg, rgba(240, 212, 115, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.5));
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
 }
 
 .blue_background {
   background: linear-gradient(340.89deg, rgba(12, 80, 148, 0.3) -4.02%, rgba(217, 217, 217, 0) 200.89%);
   filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.25));
-  -webkit-backdrop-filter: blur(80px);
-          backdrop-filter: blur(80px);
 }
 
 /* 最上面的logo 測試用而已還沒放 */
@@ -398,7 +427,12 @@ white-line {
     width: 60vw;
     max-width: 800px;
   }
-  #schedule .box {
+  #speaker .box {
     margin-right: 10%;
+  }
+
+  .card_d {
+    width: 30vw;
+    max-width: 450px;
   }
 }
