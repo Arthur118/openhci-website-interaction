@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 @font-face {
   font-family: "SF Pro Display";
   src: url("../SF_Pro_Display/SFPRODISPLAYREGULAR.woff") format("woff"), url("../SF_Pro_Display/SFPRODISPLAYREGULAR.ttf") format("truetype"), url("../SF_Pro_Display/SFPRODISPLAYREGULAR.eot") format("embedded-opentype");
@@ -43,6 +44,7 @@ blue-text {
   color: #FFFFFF;
   margin: 10%;
 }
+
 .box .box-title {
   font-weight: 400;
   font-size: 32px;
@@ -51,6 +53,7 @@ blue-text {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
   margin-bottom: 7px;
 }
+
 .box .t-24 {
   font-size: 24px;
   margin-top: 16px;
@@ -65,12 +68,15 @@ card-title {
   font-weight: 800;
   margin: 0;
 }
+
 card-title t-32 {
   font-size: 32px;
 }
+
 card-title t-28 {
   font-size: 28px;
 }
+
 card-title t-24 {
   font-size: 24px;
 }
@@ -85,10 +91,12 @@ card-title t-24 {
   line-height: 24px;
   margin: 0;
 }
+
 .schedule-text .left-text {
   float: left;
   text-align: left;
 }
+
 .schedule-text .right-text {
   float: right;
   text-align: right;
@@ -104,15 +112,16 @@ card-title t-24 {
   grid-gap: 18px;
   overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   margin: 0%;
 }
+
 .schedule_box::-webkit-scrollbar {
   width: 0px;
 }
 
-#speaker .box{
+#speaker .box {
   margin-right: 0;
 }
 
@@ -143,11 +152,11 @@ white-line {
   align-items: flex-start;
   /* width: 322px; */
   backdrop-filter: blur(80px);
-  -webkit-backdrop-filter:blur(80px);
-  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
-  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+  -webkit-backdrop-filter: blur(80px);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -209,11 +218,11 @@ white-line {
   padding: 30px;
   gap: 30px;
   backdrop-filter: blur(80px);
-  -webkit-backdrop-filter:blur(80px);
-  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
-  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+  -webkit-backdrop-filter: blur(80px);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
@@ -234,11 +243,11 @@ white-line {
   gap: 14px;
   /* width: 304px; */
   backdrop-filter: blur(80px);
-  -webkit-backdrop-filter:blur(80px);
-  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
-  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+  -webkit-backdrop-filter: blur(80px);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 
   background: linear-gradient(326.76deg, rgba(153, 174, 115, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
@@ -261,11 +270,11 @@ white-line {
   gap: 30px;
 
   backdrop-filter: blur(80px);
-  -webkit-backdrop-filter:blur(80px);
-  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
-  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+  -webkit-backdrop-filter: blur(80px);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -281,11 +290,11 @@ white-line {
   gap: 14px;
   /* width: 304px; */
   backdrop-filter: blur(80px);
-  -webkit-backdrop-filter:blur(80px);
-  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
-  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+  -webkit-backdrop-filter: blur(80px);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
@@ -337,11 +346,11 @@ white-line {
   /* align-items: flex-start; */
   padding: 25px;
   backdrop-filter: blur(80px);
-  -webkit-backdrop-filter:blur(80px);
-  border-top: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-left: 1px solid rgba( 255, 255, 255, 0.7 );
-  border-bottom: 1px solid rgba( 255, 255, 255, 0.3 );
-  border-right: 1px solid rgba( 255, 255, 255, 0.3 );
+  -webkit-backdrop-filter: blur(80px);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
@@ -394,10 +403,12 @@ white-line {
 
 .contant {
   text-align: center;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
 
 /*沒有背景跟內文看不出效果＠＠*/
-.card_e{
+.card_e {
   display: flex;
   flex-direction: column;
   /* width: 648px;
@@ -420,13 +431,16 @@ white-line {
     align-self: flex-end;
     float: right;
   }
+
   #schedule .box {
     margin-right: 10%;
   }
+
   .card_b {
     width: 60vw;
     max-width: 800px;
   }
+
   #speaker .box {
     margin-right: 10%;
   }
