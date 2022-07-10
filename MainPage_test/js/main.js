@@ -21,6 +21,18 @@ $(function() {
         $(this).siblings('.card_a_close').removeClass('active');
         console.log("hide");
     })
+    // page change
+    $('.nav-link').on('click',function(){
+        let POV = $($(this).attr('href'));
+        //console.log(POV);
+        //console.log(POV.offset().top);
+        $('html,body').animate({scrollTop: POV.offset().top-300},800);
+    })
+    let a = document.querySelector(".navbar-toggler");
+    $(".navbar-nav li a").on("click",function () {
+        a.click();
+    });
+    
 });
 
 $('.panel-collapse').on('hidden.bs.collapse', function () {
