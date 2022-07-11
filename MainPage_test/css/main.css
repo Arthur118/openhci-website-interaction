@@ -376,9 +376,13 @@ white-line {
   width: 150px;
   height: 50px;
   border: 0;
-  border-radius: 75px;
-  background: linear-gradient(241.1deg, #AF57DC 32.22%, #7B78E2 87.94%);
-  box-shadow: 0px 5px 41px rgba(0, 0, 0, 0.25), inset 0px 4px 204px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(69.1deg, #C979F2 23.56%, #AD93FA 59.52%, #B563E8 101.57%, #AE5BEF 101.58%), rgba(255, 255, 255, 0.58);
+  box-shadow: 9px -9px 30px 5px rgba(204, 97, 255, 0.3), -9px 9px 30px 5px rgba(204, 97, 255, 0.3), 4px 4px 20px 5px rgba(178, 79, 224, 0.38), inset 0px -5px 10px 2px rgba(143, 27, 185, 0.3), inset 0px 5px 10px 2px rgba(143, 27, 185, 0.3), inset -8px 1px 15px 2px rgba(243, 243, 243, 0.86), inset 8px -1px 15px 2px rgba(243, 243, 243, 0.86);
+  border-radius: 29.5px;
+  transition: all 0.3s;
+}
+.cta_btn:hover {
+  transform: scale(1.1);
 }
 
 .card_g {
