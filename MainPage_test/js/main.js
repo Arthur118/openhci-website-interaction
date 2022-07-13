@@ -1,4 +1,5 @@
 $(function() {
+//btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
         console.log("open");
@@ -7,7 +8,8 @@ $(function() {
         $(this).siblings('.card_a_close').removeClass('active');
         console.log("hide");
     })
-    // page change
+
+// page change
     $('.nav-link').on('click',function(){
         let POV = $($(this).attr('href'));
         //console.log(POV);
@@ -18,8 +20,41 @@ $(function() {
     $(".navbar-nav li a").on("click",function () {
         a.click();
     });
-    
+
+//show section on scroll
+    const ah = [];
+    for (var i = 1; i <= 14; i++) { 
+        var position = $(('section:nth-of-type('+i+')')).offset(). top;
+        
+        ah[ i-1 ] = position;
+        console.log(i+'p=' +position);
+        console.log(i+'ap=' +ah);
+    }
+
+    var windowHeight = window.innerHeight;
+    console.log('window h = ' + windowHeight)
+
+    $(document).scroll(function() {
+        var scrollPos = $(this).scrollTop();
+        for (var i = 1; i <= 14; i++) {
+            if(scrollPos >= ah[i-1] - windowHeight/1.5){
+                $(('section:nth-of-type('+i+')')).addClass('fade_in');
+                console.log(scrollPos);
+                console.log('show');
+            }
+        }
+        console.log(scrollPos);
+    })
+
 });
+
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    };
+}
 
 const scheduleInfo = {
     "前置工作坊": [
