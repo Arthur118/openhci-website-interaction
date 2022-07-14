@@ -36,7 +36,7 @@ $(function() {
 
     $(document).scroll(function() {
         var scrollPos = $(this).scrollTop();
-        for (var i = 1; i <= 14; i++) {
+        for (var i = 1; i <= 15; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
                 $(('section:nth-of-type('+i+')')).addClass('fade_in');
                 console.log(scrollPos);
