@@ -325,11 +325,13 @@ function group_information_insertion() {
 group_information_insertion();
 
 function schedule_information_insertion() {
-    const scheduleSection = document.querySelector("#schedule .box .schedule_box");
-    let workshop = "";
+    const scheduleSection = document.querySelector("#carouselSchedule");
+    let workshop = `<div class="carousel-inner">`;
     for (const [key, value] of Object.entries(scheduleInfo)) {
         value.forEach((schedule, idx) => {
-            let content = `<div class="card_b">
+            let activeDiv = (idx == 0 && key == "前置工作坊")  ? `<div class="carousel-item active">`: `<div class="carousel-item">`;
+            let content = `${activeDiv}
+                            <div class="card_b">
                                 <card-title>
                                     <t-24>${key}</t-24>
                                     <br>
@@ -346,10 +348,11 @@ function schedule_information_insertion() {
                     index += 1;
                 }
             }
-            content += `</div>`;
+            content += `</div></div>`;
             workshop += content;
         })
     }
-    scheduleSection.insertAdjacentHTML("beforeend", workshop);
+    workshop += `</div>`;
+    scheduleSection.insertAdjacentHTML("afterbegin", workshop);
 }
 schedule_information_insertion();
