@@ -50,6 +50,16 @@ blue-text {
   color: #A9EEFD;
 }
 
+
+.T-E{
+  font-family: "Righteous";
+  font-size: 24px;
+}
+.T-C{
+  font-family: "SF Pro Display";
+  font-size: 16px;
+}
+
 /* 每個區段的大框+標題文字  */
 .box {
   font-family: "Righteous";
@@ -60,7 +70,7 @@ blue-text {
 
 .box .box-title {
   font-weight: 400;
-  font-size: 32px;
+  /* font-size: 32px; */
   line-height: 1.2;
   letter-spacing: -0.011em;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
@@ -609,6 +619,12 @@ white-line {
     background: radial-gradient(circle at 15% 70%, 
   rgba(200, 200, 200, 1) 0%, rgba(200, 200, 200, 1) 10%, 
   rgba(200, 200, 200, 0.3) 20%,rgba(217, 217, 217, 0) 30%);
+  }
+  .T-E{
+    font-size: 32px;
+  }
+  .T-C{
+    font-size: 20px;
   }
   
 }
