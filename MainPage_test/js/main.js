@@ -1,4 +1,5 @@
 $(function() {
+//btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
         console.log("open");
@@ -7,19 +8,53 @@ $(function() {
         $(this).siblings('.card_a_close').removeClass('active');
         console.log("hide");
     })
-    // page change
+
+// page change
     $('.nav-link').on('click',function(){
         let POV = $($(this).attr('href'));
         //console.log(POV);
         //console.log(POV.offset().top);
-        $('html,body').animate({scrollTop: POV.offset().top-300},800);
+        $('html,body').animate({scrollTop: POV.offset().top},800);
     })
     let a = document.querySelector(".navbar-toggler");
     $(".navbar-nav li a").on("click",function () {
         a.click();
     });
-    
+
+//show section on scroll
+    const ah = [];
+    for (var i = 1; i <= 14; i++) { 
+        var position = $(('section:nth-of-type('+i+')')).offset(). top;
+        
+        ah[ i-1 ] = position;
+        console.log(i+'p=' +position);
+        console.log(i+'ap=' +ah);
+    }
+
+    var windowHeight = window.innerHeight;
+    console.log('window h = ' + windowHeight)
+
+    $(document).scroll(function() {
+        var scrollPos = $(this).scrollTop();
+        for (var i = 1; i <= 15; i++) {
+            if(scrollPos >= ah[i-1] - windowHeight/1.5){
+                $(('section:nth-of-type('+i+')')).addClass('fade_in');
+                console.log(scrollPos);
+                console.log('show');
+            }
+        }
+        console.log(scrollPos);
+    })
+
 });
+
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    };
+}
 
 const scheduleInfo = {
     "前置工作坊": [
@@ -312,7 +347,7 @@ function group_information_insertion() {
                     <div id="collapse_${key}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="width: 100%;">
                         <div class="row group_member">`;
         value.forEach((person) => {
-            content += `<div class="col-10 col-md-4">
+            content += `<div class="col-10 col-md-4 group_member_block">
                             <p><b style="font-size: 18px;">${person.name}</b><br>${person.school}<br>${person.department}</p>
                             </div>`
         })

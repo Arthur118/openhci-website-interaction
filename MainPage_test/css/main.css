@@ -15,6 +15,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
+  margin: 0 auto;
+  /* overflow-x: hidden; */
 }
 
 div {
@@ -39,9 +41,23 @@ p {
   margin: 0;
 }
 
+a{
+  cursor: pointer; 
+}
+
 /* 需要變藍色的字體可以直接用這個框 */
 blue-text {
   color: #A9EEFD;
+}
+
+
+.T-E{
+  font-family: "Righteous";
+  font-size: 24px;
+}
+.T-C{
+  font-family: "SF Pro Display";
+  font-size: 16px;
 }
 
 /* 每個區段的大框+標題文字  */
@@ -54,7 +70,7 @@ blue-text {
 
 .box .box-title {
   font-weight: 400;
-  font-size: 32px;
+  /* font-size: 32px; */
   line-height: 1.2;
   letter-spacing: -0.011em;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
@@ -147,10 +163,14 @@ card-title t-24 {
   width: 0;
   height: 0;
   border: 0;
-  margin: 0 2vw;
+  margin: 0 0.5vw;
+  border-radius: 16px;
+  backdrop-filter: blur(80px);
   color: white;
   list-style-type:circle;
   font-size: 2vw;
+  cursor: pointer; 
+  box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.25);
 }
 .carousel-indicators li.active {
   list-style-type:disc;
@@ -159,6 +179,10 @@ card-title t-24 {
 
 #speaker .box {
   margin-right: 0;
+}
+
+#carouselSpeaker{
+  display: none;
 }
 
 /* 行事曆用白色分隔線 */
@@ -175,7 +199,10 @@ white-line {
   width: 100%;
   line-height: 2;
   display: flex;
-  align-items: center;
+  align-items: top;
+}
+.group_member_block {
+  padding-bottom: 12px;
 }
 
 /* ----- 卡片設定區域 ----- */
@@ -217,6 +244,7 @@ white-line {
 
 .card_a_close i {
   transition: all 0.5s;
+  cursor: pointer; 
 }
 
 .card_a_close.active i {
@@ -241,6 +269,7 @@ white-line {
 
 #card_a_btn_close {
   display: none;
+  cursor: pointer;
 }
 
 .card_a2 {
@@ -373,9 +402,15 @@ white-line {
   width: 150px;
   height: 50px;
   border: 0;
-  border-radius: 75px;
-  background: linear-gradient(241.1deg, #AF57DC 32.22%, #7B78E2 87.94%);
-  box-shadow: 0px 5px 41px rgba(0, 0, 0, 0.25), inset 0px 4px 204px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(69.1deg, #C979F2 23.56%, #AD93FA 59.52%, #B563E8 101.57%, #AE5BEF 101.58%), rgba(255, 255, 255, 0.58);
+  box-shadow: 9px -9px 30px 5px rgba(204, 97, 255, 0.3), -9px 9px 30px 5px rgba(204, 97, 255, 0.3), 4px 4px 20px 5px rgba(178, 79, 224, 0.38), inset 0px -5px 10px 2px rgba(143, 27, 185, 0.3), inset 0px 5px 10px 2px rgba(143, 27, 185, 0.3), inset -8px 1px 15px 2px rgba(243, 243, 243, 0.86), inset 8px -1px 15px 2px rgba(243, 243, 243, 0.86);
+  border-radius: 29.5px;
+  transition: all 0.3s;
+  cursor: pointer; 
+}
+.cta_btn:hover {
+  transform: scale(1.1);
+  cursor: pointer; 
 }
 
 .card_g {
@@ -402,10 +437,12 @@ white-line {
 }
 
 .card_g_img {
-  width: 80%;
+  width: 100%;
   height: auto;
+  border-radius: 8px;
   background: #FFFFFF;
   margin-bottom: 29px;
+  align-self: center;
 }
 
 /* 要換背景顏色的話直接加這個 */
@@ -445,9 +482,10 @@ white-line {
   text-align: center;
 }
 
-/*# sourceMappingURL=main.css.map */
-
-/*沒有背景跟內文看不出效果＠＠*/
+/*沒加這個會有明顯邊界*/
+.card_e_filter{
+  filter: blur(30px);
+}
 .card_e {
   display: flex;
   flex-direction: column;
@@ -458,11 +496,13 @@ white-line {
   overflow-x: hidden;
   left: -170px;
   top: 200px;
-  background: linear-gradient(180deg, rgba(187, 135, 252, 0.066) -15.55%, rgba(255, 255, 255, 0.03) 51.64%, rgba(255, 255, 255, 0) 152.86%);
-  filter: blur(200px);
-  backdrop-filter: blur(300px);
+  background: radial-gradient(circle at 15% 65%, 
+  rgba(200, 200, 200, 1) 0%, rgba(200, 200, 200, 1) 20%, 
+  rgba(200, 200, 200, 0.3) 30%,rgba(200, 200, 200, 0) 50%);
+  backdrop-filter: blur(30px);
   z-index: 0;
 }
+
 
 /* 導引列用 */
 .bg-nav {
@@ -531,9 +571,14 @@ white-line {
     margin-right: 10%;
   }
 
-  .card_d {
+  /* .card_d {
     width: 30vw;
     max-width: 450px;
+  } */
+  /* 部分卡面電腦只佔一半 */
+  #Apply .card_a{
+    width: 49%;
+    float: left;
   }
 
   /* 導引列用 */
@@ -557,4 +602,50 @@ white-line {
   #carouselSchedule{
     display: block;
   }
+  #Speaker_phone{
+    display: none;
+  }
+  #carouselSpeaker{
+    display: block;
+  }
+  #speaker .carousel-inner .carousel-item .card_d{
+    width: 60vw;
+    max-width: 800px;
+  }
+  .card_e{
+    width: 80%;
+    align-self: flex-end;
+    float: right;
+    background: radial-gradient(circle at 15% 70%, 
+  rgba(200, 200, 200, 1) 0%, rgba(200, 200, 200, 1) 10%, 
+  rgba(200, 200, 200, 0.3) 20%,rgba(217, 217, 217, 0) 30%);
+  }
+  .T-E{
+    font-size: 32px;
+  }
+  .T-C{
+    font-size: 20px;
+  }
+  
+}
+
+section{
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+section:nth-of-type(1){
+  opacity: 1;
+  transform: translateX(0%);
+}
+section:nth-of-type(14){
+  opacity: 1;
+  transform: translateX(0%);
+  /* background-color: #fff; */
+}
+
+.fade_in{
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 500ms ease-in, transform 500ms ease-out;
 }
