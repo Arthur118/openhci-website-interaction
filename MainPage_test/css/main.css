@@ -41,7 +41,8 @@ p {
   text-align: left;
   margin: 0;
 }
-p-t{
+
+p-t {
   font-size: 20px;
 }
 
@@ -54,13 +55,8 @@ blue-text {
   color: #A9EEFD;
 }
 
-<<<<<<< Updated upstream
-
-.T-E {
-=======
 /*只有英文大標 配 中文小標*/
-.T-E{
->>>>>>> Stashed changes
+.T-E {
   font-family: "Righteous";
   font-size: 24px;
 }
@@ -71,7 +67,7 @@ blue-text {
 }
 
 /*只有中文大標*/
-.T-T-C{
+.T-T-C {
   font-family: "SF Pro Display";
   font-size: 24px;
 }
@@ -113,6 +109,7 @@ card-title {
 card-title t-20 {
   font-size: 20px;
 }
+
 /*卡片小標*/
 card-title t-16 {
   font-size: 16px;
@@ -243,7 +240,8 @@ white-line {
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-#Group .card_a{
+
+#Group .card_a {
   padding-inline: 0px;
 }
 
@@ -592,7 +590,7 @@ white-line {
     float: left;
   }
 
-  .ID_Card_Q2{
+  .ID_Card_Q2 {
     margin-inline-start: 2%;
   }
 
@@ -622,13 +620,8 @@ white-line {
   #Speaker_phone {
     display: none;
   }
-<<<<<<< Updated upstream
 
   #carouselSpeaker {
-=======
-  
-  #carouselSpeaker{
->>>>>>> Stashed changes
     display: block;
   }
 
@@ -654,18 +647,16 @@ white-line {
   .T-C {
     font-size: 20px;
   }
-<<<<<<< Updated upstream
 
-=======
   /*卡片大標*/
   card-title t-20 {
     font-size: 24px;
   }
+
   /*卡片小標*/
   card-title t-16 {
     font-size: 20px;
   }
->>>>>>> Stashed changes
 }
 
 section {
