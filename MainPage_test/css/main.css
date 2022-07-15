@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   /* 毛玻璃測試用背景 */
-  background-image: url("../image/background-test.png");
+  /* background-image: url("../image/background-test.png"); */
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -683,7 +683,6 @@ section:nth-of-type(15) {
 
 /* Tower canvas 設定 */
 #tower-canvas {
-
   position: absolute;
   z-index: -1;
 }

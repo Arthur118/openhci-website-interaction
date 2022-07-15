@@ -4,18 +4,21 @@ import { OrbitControls } from 'https://unpkg.com/three@0.142.0/examples/jsm/cont
 function main() {
     const canvas = document.querySelector('#tower-canvas');
     const renderer = new THREE.WebGLRenderer({canvas});
+    // const renderer = new THREE.WebGLRenderer({canvas, alpha: true });
     renderer.setSize( window.innerWidth, window.innerHeight );
+    // renderer.setClearColor( 0xffffff, 0 );
 
     const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 7000 );
     camera.position.set(850, 600, -850);
     camera.lookAt(new THREE.Vector3(0,0,0))
     // const controls = new OrbitControls( camera, renderer.domElement );
     const scene = new THREE.Scene();
-
+    scene.background = new THREE.Color( 0x1e1e1e );
+    
     const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
     scene.add( directionalLight );
-    const axesHelper = new THREE.AxesHelper( 1000 );
-    scene.add( axesHelper );
+    // const axesHelper = new THREE.AxesHelper( 1000 );
+    // scene.add( axesHelper );
 
     const loader = new GLTFLoader();
     let tower;
