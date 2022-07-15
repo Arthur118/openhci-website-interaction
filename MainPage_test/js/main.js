@@ -341,14 +341,14 @@ function group_information_insertion() {
     for (const [key, value] of Object.entries(groupInfo)) {
         let content = `<div class="card_a">
                     <div class="card_a_close">
-                        <card-title id="card_a_title"><t-24>${key}<t-24></card-title>
+                        <card-title id="card_a_title"><t-20>${key}<t-20></card-title>
                         <i class="fa-solid fa-chevron-down" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_${key}" aria-expanded="true" aria-controls="collapse_${key}"></i>
                     </div>
                     <div id="collapse_${key}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="width: 100%;">
                         <div class="row group_member">`;
         value.forEach((person) => {
             content += `<div class="col-10 col-md-4 group_member_block">
-                            <p><b style="font-size: 18px;">${person.name}</b><br>${person.school}<br>${person.department}</p>
+                            <p><b style="font-size: 16px;">${person.name}</b><br>${person.school}<br>${person.department}</p>
                             </div>`
         })
         content += `</div></div></div>`

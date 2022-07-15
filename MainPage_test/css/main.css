@@ -36,9 +36,13 @@ p {
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 400;
-  line-height: 2;
+  /* line-height: 2; */
+  line-height: 1.8;
   text-align: left;
   margin: 0;
+}
+p-t{
+  font-size: 20px;
 }
 
 a {
@@ -50,8 +54,13 @@ blue-text {
   color: #A9EEFD;
 }
 
+<<<<<<< Updated upstream
 
 .T-E {
+=======
+/*只有英文大標 配 中文小標*/
+.T-E{
+>>>>>>> Stashed changes
   font-family: "Righteous";
   font-size: 24px;
 }
@@ -59,6 +68,12 @@ blue-text {
 .T-C {
   font-family: "SF Pro Display";
   font-size: 16px;
+}
+
+/*只有中文大標*/
+.T-T-C{
+  font-family: "SF Pro Display";
+  font-size: 24px;
 }
 
 /* 每個區段的大框+標題文字  */
@@ -93,16 +108,14 @@ card-title {
   margin: 0;
 }
 
-card-title t-32 {
-  font-size: 32px;
+/*手機版 t-數字 是文字大小 */
+/*卡片大標*/
+card-title t-20 {
+  font-size: 20px;
 }
-
-card-title t-28 {
-  font-size: 28px;
-}
-
-card-title t-24 {
-  font-size: 24px;
+/*卡片小標*/
+card-title t-16 {
+  font-size: 16px;
 }
 
 /* 行事曆內容用文字 */
@@ -201,7 +214,7 @@ white-line {
 
 /* 成員用 */
 .group_member {
-  padding-top: 24px;
+  /* padding-top: 24px; */
   width: 100%;
   line-height: 2;
   display: flex;
@@ -229,6 +242,9 @@ white-line {
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+#Group .card_a{
+  padding-inline: 0px;
 }
 
 .panel-collapse {
@@ -394,7 +410,7 @@ white-line {
 
 .card_f {
   display: flex;
-  margin: 26px 0;
+  margin: auto;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -407,7 +423,7 @@ white-line {
   line-height: 21px;
   text-align: center;
   color: #FFFFFF;
-  width: 150px;
+  width: 130px;
   height: 50px;
   border: 0;
   background: linear-gradient(69.1deg, #C979F2 23.56%, #AD93FA 59.52%, #B563E8 101.57%, #AE5BEF 101.58%), rgba(255, 255, 255, 0.58);
@@ -576,6 +592,10 @@ white-line {
     float: left;
   }
 
+  .ID_Card_Q2{
+    margin-inline-start: 2%;
+  }
+
   /* 導引列用 */
   .navbar {
     display: inline-block;
@@ -602,8 +622,13 @@ white-line {
   #Speaker_phone {
     display: none;
   }
+<<<<<<< Updated upstream
 
   #carouselSpeaker {
+=======
+  
+  #carouselSpeaker{
+>>>>>>> Stashed changes
     display: block;
   }
 
@@ -629,7 +654,18 @@ white-line {
   .T-C {
     font-size: 20px;
   }
+<<<<<<< Updated upstream
 
+=======
+  /*卡片大標*/
+  card-title t-20 {
+    font-size: 24px;
+  }
+  /*卡片小標*/
+  card-title t-16 {
+    font-size: 20px;
+  }
+>>>>>>> Stashed changes
 }
 
 section {
