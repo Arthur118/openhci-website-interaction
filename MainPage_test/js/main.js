@@ -359,12 +359,26 @@ function group_information_insertion() {
 
 group_information_insertion();
 
-function schedule_information_insertion() {
+function schedule_information_insertion(type) {
     const scheduleSection = document.querySelector("#carouselSchedule");
-    let workshop = `<div class="carousel-inner">`;
+    const scheduleSectionPhone = document.querySelector("#schedule_phone .schedule_box");
+    let workshop = ``;
+    let endDiv = ``;
+    switch(type) {
+        case "desktop":
+            workshop = `<div class="carousel-inner">`;
+            endDiv = `</div></div>`;
+            break;
+        case "phone":
+            endDiv = `</div>`;
+            break;
+    }
     for (const [key, value] of Object.entries(scheduleInfo)) {
         value.forEach((schedule, idx) => {
-            let activeDiv = (idx == 0 && key == "前置工作坊")  ? `<div class="carousel-item active">`: `<div class="carousel-item">`;
+            let activeDiv = ``;
+            if (type == "desktop") {
+                activeDiv = (idx == 0 && key == "前置工作坊")  ? `<div class="carousel-item active">`: `<div class="carousel-item">`;
+            }
             let content = `${activeDiv}
                             <div class="card_b">
                                 <card-title>
@@ -383,11 +397,16 @@ function schedule_information_insertion() {
                     index += 1;
                 }
             }
-            content += `</div></div>`;
+            content += endDiv;
             workshop += content;
         })
     }
-    workshop += `</div>`;
-    scheduleSection.insertAdjacentHTML("afterbegin", workshop);
+    if (type == "desktop") {
+        workshop += `</div>`;
+        scheduleSection.insertAdjacentHTML("afterbegin", workshop);
+    } else {
+        scheduleSectionPhone.insertAdjacentHTML("afterbegin", workshop);
+    }
 }
-schedule_information_insertion();
+schedule_information_insertion("phone");
+schedule_information_insertion("desktop");

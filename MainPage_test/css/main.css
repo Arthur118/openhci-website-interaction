@@ -41,8 +41,8 @@ p {
   margin: 0;
 }
 
-a{
-  cursor: pointer; 
+a {
+  cursor: pointer;
 }
 
 /* 需要變藍色的字體可以直接用這個框 */
@@ -51,11 +51,12 @@ blue-text {
 }
 
 
-.T-E{
+.T-E {
   font-family: "Righteous";
   font-size: 24px;
 }
-.T-C{
+
+.T-C {
   font-family: "SF Pro Display";
   font-size: 16px;
 }
@@ -145,21 +146,25 @@ card-title t-24 {
 }
 
 /* carousel值修改 */
-#carouselSchedule{
+#carouselSchedule {
   display: none;
 }
-.carousel-control-next{
+
+.carousel-control-next {
   margin: -15%;
 }
-.carousel-control-prev{
+
+.carousel-control-prev {
   margin: -15%;
 }
-.carousel-indicators{
+
+.carousel-indicators {
   margin: 0;
   margin-left: 2vw;
   align-items: center;
 }
-.carousel-indicators li{
+
+.carousel-indicators li {
   width: 0;
   height: 0;
   border: 0;
@@ -167,13 +172,14 @@ card-title t-24 {
   border-radius: 16px;
   backdrop-filter: blur(80px);
   color: white;
-  list-style-type:circle;
+  list-style-type: circle;
   font-size: 2vw;
-  cursor: pointer; 
+  cursor: pointer;
   box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.25);
 }
+
 .carousel-indicators li.active {
-  list-style-type:disc;
+  list-style-type: disc;
 }
 
 
@@ -181,7 +187,7 @@ card-title t-24 {
   margin-right: 0;
 }
 
-#carouselSpeaker{
+#carouselSpeaker {
   display: none;
 }
 
@@ -201,6 +207,7 @@ white-line {
   display: flex;
   align-items: top;
 }
+
 .group_member_block {
   padding-bottom: 12px;
 }
@@ -244,7 +251,7 @@ white-line {
 
 .card_a_close i {
   transition: all 0.5s;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .card_a_close.active i {
@@ -322,7 +329,8 @@ white-line {
   /* Prevents scrolling past more than one child */
   scroll-snap-stop: always;
 }
-.card_b card-title{
+
+.card_b card-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -406,11 +414,12 @@ white-line {
   box-shadow: 9px -9px 30px 5px rgba(204, 97, 255, 0.3), -9px 9px 30px 5px rgba(204, 97, 255, 0.3), 4px 4px 20px 5px rgba(178, 79, 224, 0.38), inset 0px -5px 10px 2px rgba(143, 27, 185, 0.3), inset 0px 5px 10px 2px rgba(143, 27, 185, 0.3), inset -8px 1px 15px 2px rgba(243, 243, 243, 0.86), inset 8px -1px 15px 2px rgba(243, 243, 243, 0.86);
   border-radius: 29.5px;
   transition: all 0.3s;
-  cursor: pointer; 
+  cursor: pointer;
 }
+
 .cta_btn:hover {
   transform: scale(1.1);
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .card_g {
@@ -483,9 +492,9 @@ white-line {
 }
 
 .card_e {
-  background: radial-gradient(circle at 25% 55%, 
-  rgba(200, 200, 200, 0.9) 0%, rgba(200, 200, 200, 0.8) 15%, 
-  rgba(200, 200, 200, 0.5) 30%,rgba(200, 200, 200, 0.3) 50%,rgba(200, 200, 200, 0) 75%,rgba(200, 200, 200, 0) 100%);  
+  background: radial-gradient(circle at 25% 55%,
+      rgba(200, 200, 200, 0.9) 0%, rgba(200, 200, 200, 0.8) 15%,
+      rgba(200, 200, 200, 0.5) 30%, rgba(200, 200, 200, 0.3) 50%, rgba(200, 200, 200, 0) 75%, rgba(200, 200, 200, 0) 100%);
   backdrop-filter: blur(2px);
 }
 
@@ -562,7 +571,7 @@ white-line {
     max-width: 450px;
   } */
   /* 部分卡面電腦只佔一半 */
-  #Apply .card_a{
+  #Apply .card_a {
     width: 49%;
     float: left;
   }
@@ -582,57 +591,64 @@ white-line {
     float: right;
   }
 
-  #schedule_phone{
+  #schedule_phone {
     display: none;
   }
 
-  #carouselSchedule{
+  #carouselSchedule {
     display: block;
   }
-  #Speaker_phone{
+
+  #Speaker_phone {
     display: none;
   }
-  #carouselSpeaker{
+
+  #carouselSpeaker {
     display: block;
   }
-  #speaker .carousel-inner .carousel-item .card_d{
+
+  #speaker .carousel-inner .carousel-item .card_d {
     width: 60vw;
     max-width: 800px;
   }
-  .card_e{
+
+  .card_e {
     width: 100%;
     align-self: flex-end;
     float: right;
-    background: radial-gradient(circle at 45% 35%, 
-    rgba(200, 200, 200, 0.9) 0%, rgba(200, 200, 200, 0.8) 15%, 
-    rgba(200, 200, 200, 0.5) 30%,rgba(200, 200, 200, 0.3) 40%,rgba(200, 200, 200, 0) 60%,rgba(200, 200, 200, 0) 100%);  
+    background: radial-gradient(circle at 45% 35%,
+        rgba(200, 200, 200, 0.9) 0%, rgba(200, 200, 200, 0.8) 15%,
+        rgba(200, 200, 200, 0.5) 30%, rgba(200, 200, 200, 0.3) 40%, rgba(200, 200, 200, 0) 60%, rgba(200, 200, 200, 0) 100%);
     backdrop-filter: blur(3px);
   }
-  .T-E{
+
+  .T-E {
     font-size: 32px;
   }
-  .T-C{
+
+  .T-C {
     font-size: 20px;
   }
-  
+
 }
 
-section{
+section {
   opacity: 0;
   transform: translateX(50%);
 }
 
-section:nth-of-type(1){
+section:nth-of-type(1) {
   opacity: 1;
   transform: translateX(0%);
 }
-section:nth-of-type(15){
+
+section:nth-of-type(15) {
   opacity: 1;
   transform: translateX(0%);
   /* background-color: #fff; */
 }
 
-.fade_in{
+.fade_in {
   opacity: 1;
   transform: translateX(0%);
   transition: opacity 500ms ease-in, transform 500ms ease-out;
