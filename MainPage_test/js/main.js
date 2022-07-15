@@ -9,6 +9,7 @@ $(function() {
         console.log("hide");
     })
 
+
 // page change
     $('.nav-link').on('click',function(){
         let POV = $($(this).attr('href'));
@@ -23,7 +24,7 @@ $(function() {
 
 //show section on scroll
     const ah = [];
-    for (var i = 1; i <= 15; i++) { 
+    for (var i = 1; i <= 16; i++) { 
         var position = $(('section:nth-of-type('+i+')')).offset(). top;
         
         ah[ i-1 ] = position;
@@ -36,7 +37,7 @@ $(function() {
 
     $(document).scroll(function() {
         var scrollPos = $(this).scrollTop();
-        for (var i = 1; i <= 15; i++) {
+        for (var i = 1; i <= 16; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
                 $(('section:nth-of-type('+i+')')).addClass('fade_in');
                 console.log(scrollPos);
@@ -45,7 +46,6 @@ $(function() {
         }
         console.log(scrollPos);
     })
-
 });
 
 function getOffset(el) {
