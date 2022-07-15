@@ -653,3 +653,10 @@ section:nth-of-type(15) {
   transform: translateX(0%);
   transition: opacity 500ms ease-in, transform 500ms ease-out;
 }
+
+/* Tower canvas 設定 */
+#tower-canvas {
+
+  position: absolute;
+  z-index: -1;
+}
