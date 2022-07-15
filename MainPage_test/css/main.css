@@ -58,9 +58,13 @@ p {
   text-align: left;
   margin: 0;
 }
-
+/* 內文標題 */
 p-t {
   font-size: 20px;
+}
+/* 內文小字 */
+p-s {
+  font-size: 12px;
 }
 
 a {
@@ -132,6 +136,14 @@ card-title t-16 {
   font-size: 16px;
 }
 
+#Programs .box {
+  margin-right: 0;
+}
+
+#Programs .card_d{
+  gap: 30px;
+}
+
 /* 行事曆內容用文字 */
 /* 分左邊和右邊 */
 .schedule-text {
@@ -166,6 +178,7 @@ card-title t-16 {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   margin: 0%;
+  padding-right: 10%;
 }
 
 .schedule_box::-webkit-scrollbar {
@@ -173,6 +186,10 @@ card-title t-16 {
 }
 
 /* carousel值修改 */
+#carouselPrograms {
+  display: none;
+}
+
 #carouselSchedule {
   display: none;
 }
@@ -597,6 +614,15 @@ white-line {
     float: right;
   }
 
+  #Programs .box {
+    margin-right: 10%;
+  }
+
+  #carouselPrograms .card_d{
+    width: auto;
+    height: 420px;
+  }
+
   #schedule .box {
     margin-right: 10%;
   }
@@ -640,6 +666,18 @@ white-line {
     float: right;
   }
 
+  #Programs_phone {
+    display: none;
+  }
+
+  #carouselPrograms {
+    display: block;
+  }
+
+  #carousel_phone{
+    display: none;
+  }
+
   #schedule_phone {
     display: none;
   }
@@ -657,8 +695,9 @@ white-line {
   }
 
   #speaker .carousel-inner .carousel-item .card_d {
-    width: 60vw;
+    width: auto;
     max-width: 800px;
+    height: 520px;
   }
 
   #organizer .card_e {
