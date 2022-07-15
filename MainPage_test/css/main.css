@@ -54,13 +54,8 @@ blue-text {
   color: #A9EEFD;
 }
 
-<<<<<<< Updated upstream
-
-.T-E {
-=======
 /*只有英文大標 配 中文小標*/
 .T-E{
->>>>>>> Stashed changes
   font-family: "Righteous";
   font-size: 24px;
 }
@@ -622,13 +617,8 @@ white-line {
   #Speaker_phone {
     display: none;
   }
-<<<<<<< Updated upstream
 
   #carouselSpeaker {
-=======
-  
-  #carouselSpeaker{
->>>>>>> Stashed changes
     display: block;
   }
 
@@ -654,9 +644,6 @@ white-line {
   .T-C {
     font-size: 20px;
   }
-<<<<<<< Updated upstream
-
-=======
   /*卡片大標*/
   card-title t-20 {
     font-size: 24px;
@@ -665,7 +652,7 @@ white-line {
   card-title t-16 {
     font-size: 20px;
   }
->>>>>>> Stashed changes
+
 }
 
 section {
