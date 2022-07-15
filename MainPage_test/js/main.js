@@ -46,7 +46,33 @@ $(function() {
         }
         console.log(scrollPos);
     })
+
+    // hide and show navbar
+    $(window).scroll(function () {
+        let sc = $(window).scrollTop();
+        let card_start = $("#theme").offset().top;
+        //console.log('max height: ' + card_start);
+        let windowWidth = window.innerWidth;
+        let windowHeight = window.innerHeight;
+    
+        if (windowWidth > 768) {
+            if(sc > windowHeight){
+                $("#com-navbar").fadeIn();
+                $("#top_navbar").fadeIn();
+            }
+            else {
+                $("#com-navbar").fadeOut();
+                $("#top_navbar").fadeOut();
+            }
+        }
+    });
 });
+
+function setNavBar(){
+    $("#com-navbar").css('display', 'none');
+}
+
+setNavBar();
 
 function getOffset(el) {
     const rect = el.getBoundingClientRect();

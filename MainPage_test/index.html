@@ -10,55 +10,108 @@
         <script src="https://kit.fontawesome.com/cbd91073cd.js" crossorigin="anonymous"></script>
         <title>Main Page Test</title>
         <link href="css/main.css" rel="stylesheet">
-    <!-- <link href="css/card.css" rel="stylesheet"> -->    
     </head>
 
     <body>
-    
-        <nav class="navbar sticky-top navbar-dark bg-nav">
-            <a class="navbar-brand nav-link" href="#home_href">
-                <img src="image/logo.png" alt="">
-            </a>
-            <a class="navbar-brand nav-link" href="#home_href">
-                <img src="image/cyberoasis.png" alt="">
-            </a>
-            <!-- .navbar-toggler 漢堡式選單按鈕 -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <!-- .navbar-toggler-icon 漢堡式選單Icon -->
-                <img src="image/bar-icon.svg">
-            </button>
+    <!-- navbar for phone-->
+    <nav class="navbar sticky-top navbar-dark navbar-expand-md" id="top_navbar">
+        <a class="navbar-brand nav-link" href="#home">
+            <img src="image/logo.png" alt="">
+        </a>
+        <a class="navbar-brand nav-link" href="#home">
+            <img src="image/cyberoasis.png" alt="" style="filter: drop-shadow(0px 0px 8px #6BAC9A);">
+        </a>
+        <!-- .navbar-toggler 漢堡式選單按鈕 -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- .navbar-toggler-icon 漢堡式選單Icon -->
+            <img src="image/bar-icon.svg">
+        </button>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#theme_href">關於HCI</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#workshop_href">工作坊介紹</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Apply_href">報名方式</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#FAQ_href">FAQ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#TAICHI_href">TAICHI合作</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Group_href">團隊</a>
-                  </li>
-                </ul>
-              </div>
-        </nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#theme">關於HCI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#workshop">工作坊介紹</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Apply">報名方式</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#FAQ">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#TAICHI">TAICHI合作</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Group">團隊</a>
+              </li>
+              <li class="nav-item">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+                    <!-- .navbar-toggler-icon 漢堡式選單Icon -->
+                    <i class="fas fa-times"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+    </nav>
 
         <canvas id="tower-canvas" width="100%"></canvas>
 
         <div id="home_href"></div>
         <!-- section home-->  
         <section id = "home">
-            <div class = "box">
-                <div class="box-title"></div>
+            <div class="main_phone">
+                <div class="row">
+                    <p>第12屆OpenHCI人機互動工作坊</p>
+                    <img src="image/cyberoasis.png" class="col-10" style="filter: drop-shadow(0px 0px 24px #6BAC9A);">
+                    <img src="image/date.svg" class="col-9" style="margin-top: 10vh;">
+                </div>
+            </div>
+            <div class = "box main_title row" style="height: 80vh;">
+                <div class="box-title T-C col-md-8 align-self-start">第1 2 屆O p e n H C I 人機互動工作坊</div>
+                <img src="image/cyberoasis.png" class="col-11 offset-col-1">
+                <nav class="side-nav col-12">
+                    <ul style="list-style:none">
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#theme">
+                                <span class="slide-text">工作坊介紹</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#speaker">
+                                <span class="slide-text">講者陣容</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#schedule">
+                                <span class="slide-text">詳細日程表</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#Apply">
+                                <span class="slide-text">報名步驟</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#FAQ">
+                                <span class="slide-text">FAQ</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                        <li class="slide-nav-items">
+                            <a class="nav-link" href="#Group">
+                                <span class="slide-text">籌辦團隊</span>
+                                <img class="side-nav-icon" src="image/tree.png">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </section>
 
@@ -498,6 +551,21 @@
                     </div>
                 </div>
             </div>
+
+            <div class= "box">
+                <div class="box-title T-E">Sign Up</div>
+                <div class="card_c">
+                    <card-title><t-20>報名入口</t-20></card-title>
+                    <p>
+                        透過以上的內容，你是不是更暸解Open HCI 了呢？<br>
+                        如果有想更近一步報名參加我們的工作坊，也歡迎到 FB 的粉絲專頁暸解更多資訊喔！
+                    </p>
+
+                    <div class="card_f">
+                        <button type="button" class="cta_btn">我要報名！</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <div id="FAQ_href"></div>
@@ -734,6 +802,49 @@
                 <a href="mailto: program@openhci.com" class="link-light">program@openhci.com</a>
             </div>>
         </section>
+
+        <!-- navbar for computer-->
+        <nav class="side-nav" id="com-navbar" style="display: none;">
+            <ul style="list-style:none">
+                <li class="slide-nav-items ishere">
+                    <a class="nav-link" href="#theme">
+                        <span class="slide-text">工作坊介紹</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link" href="#speaker">
+                        <span class="slide-text">講者陣容</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link" href="#schedule">
+                        <span class="slide-text">詳細日程表</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link" href="#Apply">
+                        <span class="slide-text">報名步驟</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link" href="#FAQ">
+                        <span class="slide-text">FAQ</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+                <li class="slide-nav-items">
+                    <a class="nav-link" href="#Group">
+                        <span class="slide-text">籌辦團隊</span>
+                        <img class="side-nav-icon" src="image/tree.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
     </article>    
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
