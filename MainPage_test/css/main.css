@@ -170,7 +170,7 @@ card-title t-16 {
 }
 
 #schedule .box {
-  margin-right: 20%;
+  margin-right: 0%;
 }
 
 .schedule_box {
@@ -280,7 +280,7 @@ white-line {
 }
 /* 手機 */
 .main_phone{
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -619,7 +619,7 @@ white-line {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   top: 110%;
   right: 0;
   background-color: #FFF;
@@ -634,11 +634,15 @@ white-line {
   transition: all 0.3s ease-in-out;
 }
 /* is here */
-.slide-nav-items.ishere .slide-text{
+.active .slide-text{
   color: white;
 }
-.slide-nav-items.ishere .side-nav-icon{
+.active .side-nav-icon{
   opacity: 1;
+}
+.active .slide-text:before{
+  visibility: visible;
+  width: 120%;
 }
 /* hover */
 .slide-nav-items:hover .slide-text{
@@ -672,7 +676,7 @@ white-line {
   margin: 0;
   padding: 0;
 }
-#home .nav-link{
+#home .main_phone{
   padding: 0;
 }
 

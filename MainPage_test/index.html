@@ -30,22 +30,22 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#theme">關於HCI</a>
+                <a class="nav-link active" id="menu0" href="#theme">工作坊介紹</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#workshop">工作坊介紹</a>
+                <a class="nav-link" id="menu1" href="#speaker">講者陣容</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Apply">報名方式</a>
+                <a class="nav-link" id="menu2" href="#schedule">詳細日程表</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#FAQ">FAQ</a>
+                <a class="nav-link" id="menu3" href="#Apply">報名步驟</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#TAICHI">TAICHI合作</a>
+                <a class="nav-link" id="menu4" href="#FAQ">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Group">團隊</a>
+                <a class="nav-link" id="menu5" href="#Group">籌辦團隊</a>
               </li>
               <li class="nav-item">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
@@ -66,7 +66,7 @@
                 <div class="row">
                     <p>第12屆OpenHCI人機互動工作坊</p>
                     <img src="image/cyberoasis.png" class="col-10" style="filter: drop-shadow(0px 0px 24px #6BAC9A);">
-                    <img src="image/date.svg" class="col-9" style="margin-top: 10vh;">
+                    <img src="image/date.svg" class="col-10" style="margin-top: 10vh;">
                 </div>
             </div>
             <div class = "box main_title row" style="height: 80vh;">
@@ -331,38 +331,8 @@
                 </div>
             </div>
         </section>
-    
-        <!-- section schedule -->
-        <div id="schedule_href"></div>
-        <section id = "schedule">
-            <div class= "box">
-                <div class="box-title T-E">Sessions</div>
-                <div class="box-title T-C">詳細日程表</div>
-                <div id="schedule_phone">
-                    <div class="schedule_box"></div>
-                </div>
-                <div id="carouselSchedule" class="carousel slide" data-ride="carousel">
-                    <!-- id="carouselSchedule" class="carousel slide" data-ride="carousel" -->
-                        <a class="carousel-control-prev" href="#carouselSchedule" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselSchedule" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-     
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselSchedule" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselSchedule" data-slide-to="1"></li>
-                            <li data-target="#carouselSchedule" data-slide-to="2"></li>
-                            <li data-target="#carouselSchedule" data-slide-to="3"></li>
-                            <li data-target="#carouselSchedule" data-slide-to="4"></li>
-                        </ol>
-                </div>    
-            </div>
-        </section>
 
+        <div id="speaker_href"></div>
         <section id="speaker">
             <div class= "box">
                 <div class="box-title T-E">Keynote Speaker</div>
@@ -458,6 +428,37 @@
                 </div>
                 
 
+            </div>
+        </section>
+
+        <!-- section schedule -->
+        <div id="schedule_href"></div>
+        <section id = "schedule">
+            <div class= "box">
+                <div class="box-title T-E">Sessions</div>
+                <div class="box-title T-C">詳細日程表</div>
+                <div id="schedule_phone">
+                    <div class="schedule_box"></div>
+                </div>
+                <div id="carouselSchedule" class="carousel slide" data-ride="carousel">
+                    <!-- id="carouselSchedule" class="carousel slide" data-ride="carousel" -->
+                        <a class="carousel-control-prev" href="#carouselSchedule" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselSchedule" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+     
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselSchedule" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="1"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="2"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="3"></li>
+                            <li data-target="#carouselSchedule" data-slide-to="4"></li>
+                        </ol>
+                </div>    
             </div>
         </section>
 
@@ -621,7 +622,7 @@
                     </p>
 
                     <div class="card_f">
-                        <button type="button" class="cta_btn">最新消息</button>
+                        <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">最新消息</button>
                     </div>
                 </div>
             </div>
@@ -636,7 +637,7 @@
                     </p>
 
                     <div class="card_f">
-                        <button type="button" class="cta_btn">我要報名！</button>
+                        <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">我要報名！</button>
                     </div>
                 </div>
             </div>
@@ -854,17 +855,17 @@
                 <img src="image/logo.png" class="logo">
                 <p style="text-align: center;">
                     OPEN HCI<br>
-                    <a href="https://www.2021.openhci.com/" class="link-light">2021</a> | 
-                    <a href="https://www.2019.openhci.com/" class="link-light">2019</a> | 
-                    <a href="https://www.2018.openhci.com/" class="link-light">2018</a> | 
-                    <a href="https://www.2017.openhci.com/" class="link-light">2017</a> |<br> 
-                    <a href="https://www.2016.openhci.com/" class="link-light">2016</a> | 
-                    <a href="https://www.2015.openhci.com/" class="link-light">2015</a> | 
-                    <a href="https://www.2014.openhci.com/" class="link-light">2014</a> | 
-                    <a href="https://www.2013.openhci.com/" class="link-light">2013</a> |<br>
-                    <a href="https://www.2012.openhci.com/" class="link-light">2012</a> | 
-                    <a href="https://www.2011.openhci.com/" class="link-light">2011</a> | 
-                    <a href="https://www.2009.openhci.com/" class="link-light">2009</a>
+                    <a href="https://www.2021.openhci.com/" target="_blank" class="link-light">2021</a> | 
+                    <a href="https://www.2019.openhci.com/" target="_blank" class="link-light">2019</a> | 
+                    <a href="https://www.2018.openhci.com/" target="_blank" class="link-light">2018</a> | 
+                    <a href="https://www.2017.openhci.com/" target="_blank" class="link-light">2017</a> |<br> 
+                    <a href="https://www.2016.openhci.com/" target="_blank" class="link-light">2016</a> | 
+                    <a href="https://www.2015.openhci.com/" target="_blank" class="link-light">2015</a> | 
+                    <a href="https://www.2014.openhci.com/" target="_blank" class="link-light">2014</a> | 
+                    <a href="https://www.2013.openhci.com/" target="_blank" class="link-light">2013</a> |<br>
+                    <a href="https://www.2012.openhci.com/" target="_blank" class="link-light">2012</a> | 
+                    <a href="https://www.2011.openhci.com/" target="_blank" class="link-light">2011</a> | 
+                    <a href="https://www.2009.openhci.com/" target="_blank" class="link-light">2009</a>
                     <br><br>
                     @COPYRIGHT 2022 OPEN HCI
                 </p>
@@ -880,38 +881,38 @@
         <!-- navbar for computer-->
         <nav class="side-nav" id="com-navbar" style="display: none;">
             <ul style="list-style:none">
-                <li class="slide-nav-items ishere">
-                    <a class="nav-link" href="#theme">
+                <li class="slide-nav-items">
+                    <a class="nav-link active" id="menu0" href="#theme">
                         <span class="slide-text">工作坊介紹</span>
                         <img class="side-nav-icon" src="image/tree.png">
                     </a>
                 </li>
                 <li class="slide-nav-items">
-                    <a class="nav-link" href="#speaker">
+                    <a class="nav-link"  id="menu1"  href="#speaker">
                         <span class="slide-text">講者陣容</span>
                         <img class="side-nav-icon" src="image/tree.png">
                     </a>
                 </li>
                 <li class="slide-nav-items">
-                    <a class="nav-link" href="#schedule">
+                    <a class="nav-link"  id="menu2"  href="#schedule">
                         <span class="slide-text">詳細日程表</span>
                         <img class="side-nav-icon" src="image/tree.png">
                     </a>
                 </li>
                 <li class="slide-nav-items">
-                    <a class="nav-link" href="#Apply">
+                    <a class="nav-link"  id="menu3"  href="#Apply">
                         <span class="slide-text">報名步驟</span>
                         <img class="side-nav-icon" src="image/tree.png">
                     </a>
                 </li>
                 <li class="slide-nav-items">
-                    <a class="nav-link" href="#FAQ">
+                    <a class="nav-link"  id="menu4"  href="#FAQ">
                         <span class="slide-text">FAQ</span>
                         <img class="side-nav-icon" src="image/tree.png">
                     </a>
                 </li>
                 <li class="slide-nav-items">
-                    <a class="nav-link" href="#Group">
+                    <a class="nav-link"  id="menu5"  href="#Group">
                         <span class="slide-text">籌辦團隊</span>
                         <img class="side-nav-icon" src="image/tree.png">
                     </a>
@@ -935,6 +936,7 @@
                 }
             }
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
         <script type="module" src="js/tower.js"></script>
         <script src="js/main.js"></script>
     </body>    

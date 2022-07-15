@@ -15,7 +15,7 @@ $(function() {
         let POV = $($(this).attr('href'));
         //console.log(POV);
         //console.log(POV.offset().top);
-        $('html,body').animate({scrollTop: POV.offset().top},800);
+        $('html,body').animate({scrollTop: POV.offset().top, scrollLeft: 0},800);
     })
     let a = document.querySelector(".navbar-toggler");
     $(".navbar-nav li a").on("click",function () {
@@ -33,18 +33,19 @@ $(function() {
     }
 
     var windowHeight = window.innerHeight;
-    console.log('window h = ' + windowHeight)
+    console.log('window h = ' + windowHeight);
+
+    let navs = document.querySelectorAll('.nav-link');
 
     $(document).scroll(function() {
         var scrollPos = $(this).scrollTop();
         for (var i = 1; i <= 16; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
                 $(('section:nth-of-type('+i+')')).addClass('fade_in');
-                console.log(scrollPos);
-                console.log('show');
+             //   console.log(scrollPos);
+             //   console.log('show');
             }
         }
-        console.log(scrollPos);
     })
 
     // hide and show navbar
@@ -67,6 +68,21 @@ $(function() {
         }
     });
 });
+
+//導航列位置指示
+//scrollmagic init
+let controller = new ScrollMagic.Controller();
+// let sections = [$("#theme_href"),$("#speaker_href"),$("#schedule_href"),$("#Apply_href"),$("#FAQ_href"),$("#Group_href")];
+
+let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group")];
+
+for(i=0; i<sections.length; i++) {
+	let sectionId = sections[i].attr("id");
+	let sectionHeight = sections[i].outerHeight() + window.innerHeight/2 ;
+	let scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight})
+	.setClassToggle("#menu"+i, "active")
+	.addTo(controller);
+}
 
 function setNavBar(){
     $("#com-navbar").css('display', 'none');
