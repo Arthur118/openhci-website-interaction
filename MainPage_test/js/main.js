@@ -23,7 +23,7 @@ $(function() {
 
 //show section on scroll
     const ah = [];
-    for (var i = 1; i <= 14; i++) { 
+    for (var i = 1; i <= 15; i++) { 
         var position = $(('section:nth-of-type('+i+')')).offset(). top;
         
         ah[ i-1 ] = position;
