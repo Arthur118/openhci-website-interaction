@@ -102,6 +102,11 @@ function setNavBar(){
 
 setNavBar();
 
+// tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+})
+
 function getOffset(el) {
     const rect = el.getBoundingClientRect();
     return {
