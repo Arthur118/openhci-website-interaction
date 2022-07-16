@@ -38,7 +38,7 @@ $(function() {
 //show section on scroll
     const ah = [];
     for (var i = 1; i <= 16; i++) { 
-        var position = $(('section:nth-of-type('+i+')')).offset(). top;
+        var position = $(('section:nth-of-type('+i+')')).offset().top;
         
         ah[ i-1 ] = position;
         console.log(i+'p=' +position);
@@ -47,8 +47,6 @@ $(function() {
 
     var windowHeight = window.innerHeight;
     console.log('window h = ' + windowHeight);
-
-    let navs = document.querySelectorAll('.nav-link');
 
     $(document).scroll(function() {
         $('html,body').scrollLeft(0);
@@ -87,11 +85,12 @@ $(function() {
 //scrollmagic init
 let controller = new ScrollMagic.Controller();
 // let sections = [$("#theme_href"),$("#speaker_href"),$("#schedule_href"),$("#Apply_href"),$("#FAQ_href"),$("#Group_href")];
-let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group")];
+let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group"),$("#contant")];
 
-for(let i=0; i<sections.length; i++) {
+
+for(let i=0; i<sections.length-1; i++) {
 	let sectionId = sections[i].attr("id");
-	let sectionHeight = sections[i].outerHeight() + window.innerHeight/2 ;
+	let sectionHeight =  sections[i+1].offset().top - sections[i].offset().top + window.innerHeight/2;
 	let scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight})
 	.setClassToggle("#menu"+i, "active")
 	.addTo(controller);
