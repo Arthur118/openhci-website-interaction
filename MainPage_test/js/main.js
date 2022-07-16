@@ -335,6 +335,38 @@ const groupInfo = {
     }],
 }
 
+const speakerInfo = [{
+    "name": "梁容輝",
+    "title": "臺科大設計系 | 副教授",
+    "profile_picture": "./image/speaker/梁容輝老師.jpg",
+    "speech_title": "物件召喚的可能世界與纏結美學",
+    "speech_description": "資訊科技快速發展的今日，設計物將具備更高的智能，以及更高的自主性與能動性。上世紀模態邏輯學及文學領域中所發展的可能世界理論，將人類所認知的實在(reality)從現實世界(actual world)拓展到可能世界(possible world)。然而，以人類為中心所建構的可能世界，正在面臨新的挑戰：智慧型的物件，如何邀請人類進入非人類中心的可能世界並召喚纏結的經驗。"
+},{
+    "name": "陳彥仰",
+    "title": "臺大資訊工程學系 / 資訊網路與多媒體研究所 | 教授",
+    "profile_picture": "./image/speaker/profile_default_2.jpeg",
+    "speech_title": "敬請期待",
+    "speech_description": ""
+},{
+    "name": "何樵暐",
+    "title": "Digital Medicine Lab | 負責人",
+    "profile_picture": "./image/speaker/profile_default_2.jpeg",
+    "speech_title": "敬請期待",
+    "speech_description": ""
+},{
+    "name": "楊振甫",
+    "title": "DreamVok / 5% design action | 執行長",
+    "profile_picture": "./image/speaker/profile_default_2.jpeg",
+    "speech_title": "敬請期待",
+    "speech_description": ""
+},{
+    "name": "陳威帆",
+    "title": "Fourdesire | 創辦人暨產品製作人",
+    "profile_picture": "./image/speaker/profile_default_2.jpeg",
+    "speech_title": "敬請期待",
+    "speech_description": ""
+}]
+
 function group_information_insertion() {
     const groupSection = document.querySelector("#Group .box");
     let member = ``;
@@ -411,38 +443,6 @@ function schedule_information_insertion(type) {
 schedule_information_insertion("phone");
 schedule_information_insertion("desktop");
 
-const speakerInfo = [{
-    "name": "梁容輝",
-    "title": "臺科大設計系 | 副教授",
-    "profile_picture": "./image/speaker/梁容輝老師.jpg",
-    "speech_title": "物件召喚的可能世界與纏結美學",
-    "speech_description": "資訊科技快速發展的今日，設計物將具備更高的智能，以及更高的自主性與能動性。上世紀模態邏輯學及文學領域中所發展的可能世界理論，將人類所認知的實在(reality)從現實世界(actual world)拓展到可能世界(possible world)。然而，以人類為中心所建構的可能世界，正在面臨新的挑戰：智慧型的物件，如何邀請人類進入非人類中心的可能世界並召喚纏結的經驗。"
-},{
-    "name": "陳彥仰",
-    "title": "臺大資訊工程學系 / 資訊網路與多媒體研究所 | 教授",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-},{
-    "name": "何樵暐",
-    "title": "Digital Medicine Lab | 負責人",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-},{
-    "name": "楊振甫",
-    "title": "DreamVok / 5% design action | 執行長",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-},{
-    "name": "陳威帆",
-    "title": "Fourdesire | 創辦人暨產品製作人",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-}]
-
 function speaker_information_insertion(type) {
     const speakerSection = document.querySelector("#carouselSpeaker");
     const speakerSectionPhone = document.querySelector("#Speaker_phone .schedule_box");
@@ -458,7 +458,6 @@ function speaker_information_insertion(type) {
             break;
     }
     speakerInfo.forEach((speaker, idx) => {
-        console.log(speaker)
         let activeDiv = "";
         if (type == "desktop") {
             activeDiv = idx == 0  ? `<div class="carousel-item active">`: `<div class="carousel-item">`;
@@ -472,10 +471,8 @@ function speaker_information_insertion(type) {
                             <p style="font-size: 14px;">${speaker.speech_description}</p>`;
         
         content += endDiv;
-        console.log(content)
         speakerContent += content;
     })
-    console.log(speakerContent);
     if (type == "desktop") {
         speakerSection.insertAdjacentHTML("afterbegin", speakerContent);
     } else {
@@ -485,3 +482,46 @@ function speaker_information_insertion(type) {
 
 speaker_information_insertion("phone");
 speaker_information_insertion("desktop");
+
+const previousWork = [{
+    "name": "Eggy",
+    "description": "透過 Eggy時光雞，使用者可以自訂倒數時間，當時間倒數結束，Eggy時光雞會以聲音提醒使用者物品已經長時間未使用，提供其丟棄的判斷依據；同時透過垃圾袋自動彈出，來增加使用者將物品丟棄的動力。此外，Eggy時光雞以小雞破蛋的可愛形象與親切提示音，增加互動的趣味性。",
+    "url": "https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T"
+},{
+    "name": "蒲呼呼",
+    "description": "蒲呼呼是款讓離家子女能夠陪伴遠方家人的居家型互動燈光裝置。使用者可利用蒲呼呼錄下平時無法當面說出口的關心話語，透過「吹熄」燈光發送錄音，就像吹送蒲公英的種子，將思念傳遞給遠方的家人。當家人在為植物澆水時，就蒙聽到語音訊息，並聯動讓使用者的蒲呼呼再度亮起。即使彼此分隔兩地，連結依舊生生不息。",
+    "url": "https://www.youtube.com/watch?v=Bi4Os9LyU5M&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=2"
+},{
+    "name": "READEE",
+    "description": "經典，人們都認同其存在之重要性，卻深埋在彼此都不願碰觸的地底深處。呼應此次「莫比烏斯」舊物再造之精神,我們團隊將「出土」經典，向大眾推廣並協助他們理解經典。Readee將讓您體會到，經典便在生活之中，在我們的周遭，理解它不再是遙不可及的夢想！",
+    "url": "https://www.youtube.com/watch?v=icHVRLLE944&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=3"
+},{
+    "name": "尋找湖泊",
+    "description": "找到心的平靜 感受成長後的自己<br><br>我們如何幫助陷入失戀低潮者梳理混沌思緒、走出低潮迴圈?<br>「尋找湖泊」是一趟有終點的旅行。提供失戀者在旅途中透過語音心情記錄、沙遊世界建構、寄送與簽收他人沙遊風景明信片、與角色問答及反思等過程中進行自我覺察、釐清低潮時的混沌思緒,並勇於主動走到戶外體驗新環境跳脫迴圈場景。希望所有失戀者在旅程盡頭之處抵達象徵內心的湖泊時,能找到屬於自己的平靜、感受成長後的自己。",
+    "url": "https://www.youtube.com/watch?v=Av9xV6ZbyhY&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=4"
+},{
+    "name": "memoscape.",
+    "description": "「將日常回憶編織成一幅最美的風景。」<br><br>回憶,是日常的點滴，是經驗的積累，承載了人與人之間的羈絆，見證了痛苦、歡笑與成長。回憶，是舊的情感再度被喚起，是過去的種種再度陪伴身旁，時時提醒我們初衷，成為我們的精神支柱。但回憶不易保存，想要憶起過往也時常遇到重重阻礙，失去記憶讓我們忽視，生活的時時刻刻都十足珍貴。因此，我們設計了「memoscape」,融合了底片機與場記板，暗喻剪接珍貴的日常生活；同時結合記憶與日曆，將生活日常回憶化，打造出一張張刻錄生活、獨一無二的日曆卡。日曆卡拼接成畫，隨著日子的流逝，創造出僅屬於自己，一幅最美的風景。 讓使用者在不斷前進時，也可以感受到過往的溫度。<br><br>日子層層疊疊，過去的記憶形塑我們如今的樣貌，銘記每一天的重要的時刻，就是珍視一路走來的自己。",
+    "url": "https://www.youtube.com/watch?v=-8GBYjpyL1c&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=5"
+},{
+    "name": "Walking Workie",
+    "description": "疫情時代，遠距工作成為主流之一，改變實體辦公室中既有的互動關係，人與人之間的溝通習慣也被迫重新建立。以此為出發點，我們設計出「Walking Workie」，一個桌上型互動裝置，讓你化身為虛擬小人，在上班時間於裝置中漫步，並在其中關心同事的工作狀態，重建辦公室陪伴感，並讓團隊增進對彼此的理解與信任。",
+    "url": "https://www.youtube.com/watch?v=WEA_fWzaCG0&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=6"
+},{
+    "name": "氛享",
+    "description": "用氣氛連結人與人之間最真誠的感受，創造溫暖的互動氛圍，進而讓年輕人獲得認同感。",
+    "url": "https://www.youtube.com/watch?v=ZOiKG2sW1_0&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=7"
+},{
+    "name": "憶起亂掰",
+    "description": "現代的生活忙碌，人們已經習慣於科技幫助我們保存生活中的回憶，然而科技呈現回憶的方式無法激起人們的情緒感受，我們好奇，有沒有一種可以激起人們情緒感受的回憶方式？",
+    "url": "https://www.youtube.com/watch?v=YgKbFm13u4E&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=8"
+}]
+
+
+
+
+
+
+
+
+
