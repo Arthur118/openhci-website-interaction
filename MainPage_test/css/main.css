@@ -218,7 +218,7 @@ card-title t-16 {
   border: 0;
   margin: 0 0.5vw;
   border-radius: 16px;
-  backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
   color: white;
   list-style-type: circle;
   font-size: 2vw;
@@ -305,13 +305,14 @@ white-line {
   padding-inline: 10px;
   display: block;
   /* width: 322px; */
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   background: linear-gradient(326.76deg, rgba(131, 85, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+  filter: drop-shadow(7px -4px 28px #000000);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -376,8 +377,8 @@ white-line {
   align-items: flex-start;
   padding: 30px;
   gap: 30px;
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -401,8 +402,8 @@ white-line {
   padding: 30px;
   gap: 14px;
   /* width: 304px; */
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -435,8 +436,8 @@ white-line {
   padding: 40px 30px 30px;
   gap: 30px;
 
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -455,8 +456,8 @@ white-line {
   padding: 30px;
   gap: 14px;
   /* width: 304px; */
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -518,8 +519,8 @@ white-line {
   flex-direction: column;
   /* align-items: flex-start; */
   padding: 25px;
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -822,6 +823,21 @@ white-line {
   #Apply .card_a {
     width: 49%;
     float: left;
+  }
+  #Previous .card_a {
+    width: 42%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5%;
+  }
+  .card_space{
+    content: "";
+    display: block;
+    clear: right;
+  }
+  #Previous .card_a_close {
+    padding-top: 0;
+    float: right;
   }
 
   .ID_Card_Q2 {

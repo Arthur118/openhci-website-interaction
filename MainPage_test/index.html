@@ -56,8 +56,8 @@
             </ul>
           </div>
     </nav>
-
-        <canvas id="tower-canvas" width="100%"></canvas>
+    <div class="back-tower"><canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas></div>
+<!--         <canvas id="tower-canvas" width="100% style="position: fixed;""></canvas>  -->
 
         <div id="home_href"></div>
         <!-- section home-->  
@@ -606,13 +606,23 @@
                 <div class="box-title T-T-C">錄取名單資訊</div>
                 <div class="card_c">
                     <card-title><t-20>公告時間</t-20></card-title>
+                    <div class="container p-0">
+                        <div class="row m-0">
+                            <img class="col-3 col-md-2 p-1 p-md-2 mb-5" src="image/0801.svg">
+                            <div class="col-8 col-md-3 mb-5 pt-2">
+                                <blue-text>公告錄取名單</blue-text><br>正取學員繳費<br>確認報名與匯款資料後即完成報名。
+                            </div>
+                            <i class="col-1 p-0 mb-5 align-self-center fas fa-caret-right"></i>
+
+                            <img class="col-3 col-md-2 p-1 p-md-2 mb-5" src="image/0803.svg">
+                            <div class="col-8 col-md-3 mb-5 pt-2">
+                                <blue-text>遞補備取通知</blue-text><br>備取學員繳費<br>確認報名與匯款資料後即完成報名。
+                            </div>
+                        </div>
+                    </div>
                     <p>
-                        <blue-text>07 / 11 17:00 前</blue-text> <br>
-                        正取學員繳費<br>確認報名<br>▼<br>
-                        <blue-text>07 / 12  17:00 後</blue-text> <br>
-                        遞補備取通知<br>▼<br>
-                        <blue-text>07 / 14 17:00 前</blue-text> <br>
-                        備取學員繳費<br>確認報名
+                        未在指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。<br>
+                        關於報名有任何問題，歡迎聯絡主辦單位人事組：human@openhci.com
                     </p>
 
                     <card-title><t-20>正備取名單</t-20></card-title>
@@ -745,52 +755,138 @@
             <div class= "box">
                 <div class="box-title T-E">Previous Works</div>
                 <div class="box-title T-C">歷屆作品</div>
-                <div class="row justify-content-around" style="margin: 0;">
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work1.png">
-                        <card-title><t-20>時光雞</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
+                <!-- 用row包起來會一起展開 -->
+                <div class="row">
+                    <div class="card_a">
+                        <div class="card_a_show">
+                            <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T" target="_blank">
+                                <img class="card_g_img" src="image/work1.png"></a>
+                            <card-title><t-20>時光雞</t-20></card-title> <br>
+                            <card-title><t-16>最佳互動獎</t-16></card-title> 
+                        </div>
+                        <div id="work-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <p>
+                               介紹文字
+                            </p>
+                        </div>
+                        <div class="card_a_close">
+                            <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-1" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
+                        </div>
                     </div>
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work2.png">
-                        <card-title><t-20>蒲呼呼</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
+                    <div class="card_a">
+                        <div class="card_a_show">
+                            <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=2" target="_blank">
+                                <img class="card_g_img" src="image/work2.png"></a>
+                            <card-title><t-20>蒲呼呼</t-20></card-title> <br>
+                            <card-title><t-16>最佳故事獎</t-16></card-title> 
+                        </div>
+                        <div id="work-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <p>
+                               介紹文字
+                            </p>
+                        </div>
+                        <div class="card_a_close">
+                            <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-2" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="row justify-content-around">
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work3.png">
-                        <card-title><t-20>READEE</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
+                <!-- 沒有包起來的部分：開左邊的底下的卡會彈開 找原因中 -->
+                <div class="card_a">
+                    <div class="card_a_show">
+                        <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=3" target="_blank">
+                            <img class="card_g_img" src="image/work3.png"></a>
+                        <card-title><t-20>READEE</t-20></card-title> <br>
+                        <card-title><t-16>最佳簡報獎</t-16></card-title> 
                     </div>
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work4.png">
-                        <card-title><t-20>尋找湖泊</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
+                    <div id="work-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                           介紹文字
+                        </p>
                     </div>
-                </div>
-                <div class="row justify-content-around">
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work5.png">
-                        <card-title><t-20>memoscape.</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
-                    </div>
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work6.png">
-                        <card-title><t-20>Walking Workie</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-3" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
                     </div>
                 </div>
-                <div class="row justify-content-around">
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work7.png">
-                        <card-title><t-20>氛享</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
+                <div class="card_a">
+                    <div class="card_a_show">
+                        <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=4" target="_blank">
+                            <img class="card_g_img" src="image/work4.png"></a>
+                        <card-title><t-20>尋找湖泊</t-20></card-title> <br>
+                        <card-title><t-16>最佳造型獎</t-16></card-title> 
                     </div>
-                    <div class="col-10 col-md-5 card_g">
-                        <img class="card_g_img" src="image/work8.png">
-                        <card-title><t-20>憶起亂掰</t-20></card-title>
-                        <card-title><t-16>最佳整體獎</t-16></card-title> 
+                    <div id="work-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                           介紹文字
+                        </p>
+                    </div>
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-4" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
+                    </div>
+                </div>
+
+                <div class="card_a">
+                    <div class="card_a_show">
+                        <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=5" target="_blank">
+                            <img class="card_g_img" src="image/work5.png"></a>
+                        <card-title><t-20>memoscape.</t-20></card-title> <br>
+                        <card-title><t-16>最佳切題獎</t-16></card-title> 
+                    </div>
+                    <div id="work-5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                           介紹文字
+                        </p>
+                    </div>
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-5" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
+                    </div>
+                </div>
+                <div class="card_a">
+                    <div class="card_a_show">
+                        <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=6" target="_blank">
+                            <img class="card_g_img" src="image/work6.png"></a>
+                        <card-title><t-20>Walking Workie</t-20></card-title> <br>
+                        <card-title><t-16>最佳技術獎</t-16></card-title> 
+                    </div>
+                    <div id="work-6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                           介紹文字
+                        </p>
+                    </div>
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-6" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
+                    </div>
+                </div>
+
+                <div class="card_a">
+                    <div class="card_a_show">
+                        <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=7" target="_blank">
+                            <img class="card_g_img" src="image/work7.png"></a>
+                        <card-title><t-20>氛享</t-20></card-title> <br>
+                        <card-title><t-16>最佳人氣獎</t-16></card-title> 
+                    </div>
+                    <div id="work-7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                           介紹文字
+                        </p>
+                    </div>
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-7" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
+                    </div>
+                </div>
+                <div class="card_a">
+                    <div class="card_a_show">
+                        <a href="https://www.youtube.com/watch?v=pCtAFKTj8-A&list=PL5Zz58VdLY58wGAr6sZ5gf8XR5R-awn5T&index=8" target="_blank">
+                            <img class="card_g_img" src="image/work8.png"></a>
+                        <card-title><t-20>憶起亂掰</t-20></card-title> <br>
+                        <card-title><t-16>最佳Demo獎</t-16></card-title> 
+                    </div>
+                    <div id="work-8" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <p>
+                           介紹文字
+                        </p>
+                    </div>
+                    <div class="card_a_close">
+                        <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#work-8" aria-expanded="true" aria-controls="collapse_報名資訊"></i>
                     </div>
                 </div>
 
