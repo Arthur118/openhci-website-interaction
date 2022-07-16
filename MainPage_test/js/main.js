@@ -88,7 +88,7 @@ let controller = new ScrollMagic.Controller();
 let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group"),$("#contant")];
 
 
-for(i=0; i<sections.length-1; i++) {
+for(let i=0; i<sections.length-1; i++) {
 	let sectionId = sections[i].attr("id");
 	let sectionHeight =  sections[i+1].offset().top - sections[i].offset().top + window.innerHeight/2;
 	let scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight})
