@@ -58,6 +58,7 @@ p {
   text-align: left;
   margin: 0;
 }
+
 /* 內文標題 */
 p-t {
   font-size: 20px;
@@ -69,7 +70,9 @@ p-s {
 
 a {
   cursor: pointer;
+  text-decoration:none
 }
+a:hover{ text-decoration:none}
 
 /* 需要變藍色的字體可以直接用這個框 */
 blue-text {
@@ -137,12 +140,13 @@ card-title t-16 {
 }
 
 #Programs .box {
-  margin-right: 0;
+  margin-right: 20%;
 }
 
 #Programs .card_d{
   gap: 30px;
 }
+
 
 /* 行事曆內容用文字 */
 /* 分左邊和右邊 */
@@ -166,7 +170,7 @@ card-title t-16 {
 }
 
 #schedule .box {
-  margin-right: 0;
+  margin-right: 0%;
 }
 
 .schedule_box {
@@ -254,6 +258,43 @@ white-line {
 
 .group_member_block {
   padding-bottom: 12px;
+}
+
+/* 最上面主視覺用 */
+/* 電腦 */
+.main_title{
+  display: none;
+  margin: 7%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.main_title .T-C{
+  width: 70%;
+  float: left;
+  font-size: 1.2em;;
+  line-height: 120%;
+  text-align:justify;
+  text-justify:distribute-all-lines;
+  text-align-last:justify;
+}
+/* 手機 */
+.main_phone{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  background: rgba(22, 22, 22, 0.9);
+  box-shadow: inset 0px 0px 40px 30px #1E1E1E;
+}
+.main_phone .row{
+  justify-content: center;
+}
+.main_phone p{
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ----- 卡片設定區域 ----- */
@@ -518,13 +559,6 @@ white-line {
   filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.25));
 }
 
-/* 最上面的logo 測試用而已還沒放 */
-.home-title {
-  width: 60%;
-  padding: 20px;
-  float: right;
-}
-
 .link-light {
   color: #FFFFFF;
 }
@@ -561,15 +595,99 @@ white-line {
   padding-bottom: 10%;
 }
 
-/* 導引列用 */
-.bg-nav {
-  background: #303030;
+/* 導引列all */
+/* 電腦版 */
+.side-nav {
+  display: none;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  text-align: right;
+}
+.slide-nav-items{
+  margin-bottom: 10px;
+}
+.slide-text{
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+.slide-text:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  top: 110%;
+  right: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.side-nav-icon{
+  max-width: 1em;
+  height: auto;
+  opacity: 0;
+  margin-left: 0.5em;
+  transition: all 0.3s ease-in-out;
+}
+/* is here */
+.active .slide-text{
+  color: white;
+}
+.active .side-nav-icon{
+  opacity: 1;
+}
+.active .slide-text:before{
+  visibility: visible;
+  width: 120%;
+}
+/* hover */
+.slide-nav-items:hover .slide-text{
+  color: #FFF;
+}
+.slide-nav-items:hover .side-nav-icon{
+  opacity: 1;
+  filter:
+  drop-shadow(0px 0px 2px #269707)
+  drop-shadow(0px 0px 4px #269707)
+  drop-shadow(0px 0px 8.54px #269707)
+  drop-shadow(0px 0px 12.27px #269707)
+}
+.slide-nav-items:hover .slide-text:before{
+  visibility: visible;
+  width: 120%;
+  box-shadow: 0px 0px 309.96px #49F88C, 0px 0px 177.12px #49F88C, 0px 0px 103.32px #49F88C, 0px 0px 51.66px #49F88C, 0px 0px 14.76px #49F88C, 0px 0px 7.38px #49F88C;
+}
+/* 最上面 */
+#home .side-nav{
+  display: none;
+  align-items: center;
+  text-align: right;
+  align-items: flex-start;
+  font-size: 36px;
+  line-height: 1.5;
+  position: relative;
+  justify-content: flex-end;
+}
+#home .slide-nav-items{
+  margin: 0;
+  padding: 0;
+}
+#home .main_phone{
+  padding: 0;
 }
 
+/* 手機導引列 */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #303030;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -606,16 +724,75 @@ white-line {
   max-height: 3vh;
 }
 
+.navbar .navbar-collapse{
+  background:rgba(0,0,0,0.85);
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  transition:opacity 0.35s ease;
+  display:flex;
+  flex-direction:column;
+  align-content:center;
+  text-align:center !important;
+  align-items: flex-end;
+}
+.navbar .navbar-collapse.collapse{
+  display:flex;
+  opacity:0;
+  pointer-events:none
+}
+.navbar .navbar-collapse.collapsing[style*="height"]{
+  opacity:1;
+  height:100vh !important;
+  display: flex;
+  align-items: flex-end;
+}
+.navbar .navbar-collapse.collapsing{
+  opacity:0;
+  height:80vh;
+  display: flex;
+  align-items: flex-end;
+}
+.navbar .navbar-collapse.collapse.show{
+  opacity:1;
+  pointer-events:auto;
+}
+.navbar .navbar-collapse .navbar-nav{
+  height: 40vh;
+  margin-right:2em !important;
+  margin-top:auto;
+  margin-bottom:2em;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  row-gap: 4vh;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .box {
     width: 60%;
     max-width: 800px;
     align-self: flex-end;
     float: right;
+    margin-right: 20%;
+  }
+  #home .box{
+    margin-top: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .main_phone{
+    display: none;
   }
 
   #Programs .box {
-    margin-right: 10%;
+    margin-right: 20%;
   }
 
   #carouselPrograms .card_d{
@@ -624,7 +801,7 @@ white-line {
   }
 
   #schedule .box {
-    margin-right: 10%;
+    margin-right: 20%;
   }
 
   .card_b {
@@ -634,7 +811,7 @@ white-line {
   }
 
   #speaker .box {
-    margin-right: 10%;
+    margin-right: 20%;
   }
 
   /* .card_d {
@@ -652,6 +829,27 @@ white-line {
   }
 
   /* 導引列用 */
+  .side-nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    text-align: right;
+    z-index: 5;
+  }
+  #home .side-nav{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    align-items: flex-start;
+    font-size: 36px;
+    line-height: 1.5;
+    height: max-content;
+    justify-content: flex-end;
+  }
+
   .navbar {
     display: inline-block;
   }
@@ -665,7 +863,7 @@ white-line {
   .navbar-toggler {
     float: right;
   }
-
+  
   #Programs_phone {
     display: none;
   }
