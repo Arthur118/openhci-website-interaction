@@ -350,6 +350,12 @@ white-line {
   position: relative;
 }
 
+#Previous .card_a_close {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-top: 0px;
+}
+
 .card_a_close i {
   transition: all 0.5s;
   cursor: pointer;
