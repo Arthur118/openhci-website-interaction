@@ -45,8 +45,9 @@ $(function() {
     //    console.log(i+'ap=' +ah);
     }
 
-    var windowHeight = window.innerHeight;
-    console.log('window h = ' + windowHeight);
+    let windowHeight = window.innerHeight;
+    let windowWidth = window.innerWidth;
+    //console.log('window h = ' + windowHeight);
 
     $(document).scroll(function() {
         $('html,body').scrollLeft(0);
@@ -60,14 +61,13 @@ $(function() {
         }
     })
 
+    
+
     // hide and show navbar
     $(window).scroll(function () {
         let sc = $(window).scrollTop();
         let card_start = $("#theme").offset().top - window.innerHeight/4;
         //console.log('max height: ' + card_start);
-        let windowWidth = window.innerWidth;
-        let windowHeight = window.innerHeight;
-    
         if (windowWidth > 768) {
             if(sc > card_start){
                 $("#top_navbar").fadeIn(200);
@@ -78,7 +78,30 @@ $(function() {
                 $("#top_navbar").fadeOut(800);
             }
         }
+        // phone main page background
+        // only work when head
+        if(sc < windowHeight*1.5){
+            let targetOpacity = 0.9;
+            targetOpacity = (1 - sc/windowHeight)*targetOpacity;
+            $('.main_phone').css({
+                'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')'
+            });
+        }
     });
+
+    // refresh when resize
+    let $window = $(window);
+    let width = $window.width();
+    let height = $window.height();
+
+    setInterval(function () {
+        if ((width != $window.width()) || (height != $window.height())) {
+            width = $window.width();
+            height = $window.height();
+            location.reload();
+            //console.log("resized!");
+        }
+    }, 300);
 });
 
 //導航列位置指示
