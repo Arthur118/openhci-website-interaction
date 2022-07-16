@@ -625,8 +625,21 @@ white-line {
   text-align: right;
 }
 
+#home .nav-link{
+  padding: 0%;
+}
+
 .slide-nav-items {
   margin-bottom: 10px;
+}
+
+.navbutton-fb{
+  display: none !important;
+  float: right;
+  margin-right: 0;
+}
+.navbutton-fb .cta_btn{
+  height: 90%;
 }
 
 .slide-text {
@@ -929,6 +942,11 @@ white-line {
     display: inline-block;
     padding: 0;
     margin-right: 50px;
+    margin-top: 0.2em;
+  }
+  .navbutton-fb {
+    display: inline-block !important;
+    margin-right: 30px;
   }
 
   .navbar-toggler {

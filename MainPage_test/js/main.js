@@ -15,11 +15,11 @@ $(function() {
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
-        console.log("open");
+     //   console.log("open");
     })
     $('.panel-collapse').on('hide.bs.collapse', function () {
         $(this).siblings('.card_a_close').removeClass('active');
-        console.log("hide");
+    //    console.log("hide");
     })
 
 
@@ -41,8 +41,8 @@ $(function() {
         var position = $(('section:nth-of-type('+i+')')).offset().top;
         
         ah[ i-1 ] = position;
-        console.log(i+'p=' +position);
-        console.log(i+'ap=' +ah);
+    //    console.log(i+'p=' +position);
+    //    console.log(i+'ap=' +ah);
     }
 
     var windowHeight = window.innerHeight;
@@ -63,19 +63,19 @@ $(function() {
     // hide and show navbar
     $(window).scroll(function () {
         let sc = $(window).scrollTop();
-        //let card_start = $("#theme").offset().top;
+        let card_start = $("#theme").offset().top - window.innerHeight/4;
         //console.log('max height: ' + card_start);
         let windowWidth = window.innerWidth;
         let windowHeight = window.innerHeight;
     
         if (windowWidth > 768) {
-            if(sc > windowHeight){
-                $("#com-navbar").fadeIn();
-                $("#top_navbar").fadeIn();
+            if(sc > card_start){
+                $("#top_navbar").fadeIn(200);
+                $("#com-navbar").fadeIn(800);
             }
             else {
                 $("#com-navbar").fadeOut();
-                $("#top_navbar").fadeOut();
+                $("#top_navbar").fadeOut(800);
             }
         }
     });
