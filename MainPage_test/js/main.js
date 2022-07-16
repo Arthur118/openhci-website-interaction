@@ -1,4 +1,17 @@
+import {main} from "./tower.js"
+
 $(function() {
+// model position control
+    let windowSize = window.matchMedia("(min-width: 768px)")
+    function modelControl(size) {
+        if (size.matches) { // If media query matches
+            main(750, 30);
+        } else {
+            main(500, 120);
+        }
+    }
+    modelControl(windowSize) // Call listener function at run time
+    windowSize.addListener(modelControl);    
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
@@ -76,7 +89,7 @@ let controller = new ScrollMagic.Controller();
 
 let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group")];
 
-for(i=0; i<sections.length; i++) {
+for(let i=0; i<sections.length; i++) {
 	let sectionId = sections[i].attr("id");
 	let sectionHeight = sections[i].outerHeight() + window.innerHeight/2 ;
 	let scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight})
