@@ -350,6 +350,12 @@ white-line {
   position: relative;
 }
 
+#Previous .card_a_close {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-top: 0px;
+}
+
 .card_a_close i {
   transition: all 0.5s;
   cursor: pointer;
@@ -820,12 +826,6 @@ white-line {
   margin: 0;
 }
 
-
-.tooltip-inner{
-  padding: 5%;
-  width: 120%;
-}
-
 @media (min-width: 768px) {
   .box {
     width: 60%;
@@ -869,6 +869,10 @@ white-line {
     margin-right: 20%;
   }
 
+  /* .card_d {
+    width: 30vw;
+    max-width: 450px;
+  } */
   /* 部分卡面電腦只佔一半 */
   #Apply .card_a {
     width: 49%;
