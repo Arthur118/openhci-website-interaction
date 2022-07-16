@@ -51,6 +51,7 @@ $(function() {
     let navs = document.querySelectorAll('.nav-link');
 
     $(document).scroll(function() {
+        $('html,body').scrollLeft(0);
         var scrollPos = $(this).scrollTop();
         for (var i = 1; i <= 16; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
@@ -64,7 +65,7 @@ $(function() {
     // hide and show navbar
     $(window).scroll(function () {
         let sc = $(window).scrollTop();
-        let card_start = $("#theme").offset().top;
+        //let card_start = $("#theme").offset().top;
         //console.log('max height: ' + card_start);
         let windowWidth = window.innerWidth;
         let windowHeight = window.innerHeight;
@@ -86,7 +87,6 @@ $(function() {
 //scrollmagic init
 let controller = new ScrollMagic.Controller();
 // let sections = [$("#theme_href"),$("#speaker_href"),$("#schedule_href"),$("#Apply_href"),$("#FAQ_href"),$("#Group_href")];
-
 let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group")];
 
 for(let i=0; i<sections.length; i++) {
