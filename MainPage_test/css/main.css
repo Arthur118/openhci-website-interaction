@@ -192,6 +192,7 @@ card-title t-16 {
 
 .schedule_box::-webkit-scrollbar {
   width: 0px;
+  display: none;
 }
 
 /* carousel值修改 */
@@ -501,7 +502,7 @@ white-line {
 /*沒有給btn大小，這邊先自行設定*/
 .cta_btn {
   font-family: SF Pro Display;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 21px;
   text-align: center;
@@ -670,13 +671,27 @@ white-line {
 .slide-nav-items:hover .side-nav-icon {
   opacity: 1;
   filter:
-    drop-shadow(0px 0px 2px #269707) drop-shadow(0px 0px 4px #269707) drop-shadow(0px 0px 8.54px #269707) drop-shadow(0px 0px 12.27px #269707)
+    drop-shadow(0px 0px 2px #269707) drop-shadow(0px 0px 4px #269707) drop-shadow(0px 0px 8.54px #269707) drop-shadow(0px 0px 12.27px #269707);
 }
 
 .slide-nav-items:hover .slide-text:before {
   visibility: visible;
   width: 120%;
   box-shadow: 0px 0px 309.96px #49F88C, 0px 0px 177.12px #49F88C, 0px 0px 103.32px #49F88C, 0px 0px 51.66px #49F88C, 0px 0px 14.76px #49F88C, 0px 0px 7.38px #49F88C;
+}
+
+.fa-facebook-f:hover{
+  filter:
+    drop-shadow(0px 0px 2px #269707) drop-shadow(0px 0px 8.54px #269707);
+}
+.fa-youtube:hover{
+  filter:
+    drop-shadow(0px 0px 2px #269707) drop-shadow(0px 0px 8.54px #269707);
+}
+.link-light:hover{
+  color: white;
+  filter:
+    drop-shadow(0px 0px 2px #269707)drop-shadow(0px 0px 8.54px #269707);
 }
 
 /* 最上面 */
@@ -796,6 +811,12 @@ white-line {
   justify-content: flex-end;
   row-gap: 4vh;
   font-weight: bold;
+}
+
+.justify-content-around {
+  -ms-flex-pack: distribute!important;
+  justify-content: space-around!important;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
