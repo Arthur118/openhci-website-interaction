@@ -873,10 +873,10 @@ white-line {
     float: left;
   }
   #Previous .card_a {
-    width: 42%;
+    /* width: 42%; */
     float: left;
-    margin-right: 5%;
-    margin-bottom: 5%;
+    /* margin-right: 5%;
+    margin-bottom: 5%; */
   }
   .card_space{
     content: "";
