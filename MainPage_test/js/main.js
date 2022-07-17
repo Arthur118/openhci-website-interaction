@@ -24,13 +24,31 @@ $(function() {
     //    console.log("hide");
     })
 
+    // refresh when resize
+    let $window = $(window);
+    let width = $window.width();
+    let height = $window.height();
+
+    setInterval(function () {
+        if ((width != $window.width()) || (height != $window.height())) {
+            width = $window.width();
+            height = $window.height();
+            location.reload();
+            //console.log("resized!");
+        }
+    }, 300);
+    //when load reset tower
+    window.onbeforeunload = () => {  
+        window.scrollTo(0, 0);
+    };
+
 
 // page change
     $('.nav-link').on('click',function(){
         let POV = $($(this).attr('href'));
         //console.log(POV);
         //console.log(POV.offset().top);
-        $('html,body').animate({scrollTop: POV.offset().top, scrollLeft: 0},800);
+        $('html,body').animate({scrollTop: (POV.offset().top - windowHeight*0.1), scrollLeft: 0},800);
     })
     let a = document.querySelector(".navbar-toggler");
     $(".navbar-nav li a").on("click",function () {
@@ -69,12 +87,8 @@ $(function() {
                 $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
             }
         }
-    })
 
-    
-
-    // hide and show navbar
-    $(window).scroll(function () {
+        // hide and show navbar
         let sc = $(window).scrollTop();
         let card_start = $("#theme").offset().top - window.innerHeight/4;
         //console.log('max height: ' + card_start);
@@ -110,25 +124,7 @@ $(function() {
                 'box-shadow': 'inset 0px -30px 15px -10px rgba(34,34,34, ' + targetOpacity +')'
             });
         }
-    });
-
-    // refresh when resize
-    let $window = $(window);
-    let width = $window.width();
-    let height = $window.height();
-
-    setInterval(function () {
-        if ((width != $window.width()) || (height != $window.height())) {
-            width = $window.width();
-            height = $window.height();
-            location.reload();
-            //console.log("resized!");
-        }
-    }, 300);
-    //when load reset tower
-    window.onbeforeunload = () => {  
-        window.scrollTo(0, 0);
-    };
+    })
 });
 
 //導航列位置指示
