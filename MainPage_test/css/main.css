@@ -26,6 +26,8 @@ body {
   background-position: center bottom;
   background-attachment: fixed !important;
   background-size: 110vmax, 110vmax;
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
   overflow-x: hidden;
   justify-content: space-around;
