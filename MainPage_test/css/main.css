@@ -298,7 +298,7 @@ white-line {
   align-content: center;
   position: relative;
   background-color: rgba(22, 22, 22, 0.9);
-  box-shadow: inset 0px 0px 40px 30px #1E1E1E;
+  box-shadow: inset 0px -30px 15px -10px rgba(34,34,34,1);
 }
 
 .main_phone .row {

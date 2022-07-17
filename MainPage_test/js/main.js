@@ -84,8 +84,8 @@ $(function() {
         // phone main page background
         // only work when head
         if(sc < windowHeight*1.5){
-            let targetOpacity = 0.9;
-            targetOpacity = (1 - sc/windowHeight)*targetOpacity;
+            let targetOpacity = 0.8;
+            targetOpacity = (1 - sc/(windowHeight*0.8))*targetOpacity;
             $('.main_phone').css({
                 'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')'
             });
