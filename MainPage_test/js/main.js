@@ -62,20 +62,6 @@ $(function() {
              //   console.log('show');
             }
         }
-        // for (var i = 14; i <= 15; i++) {
-        //     if(scrollPos >= ah[i-1] - windowHeight/1.5){
-        //         console.log('show');
-        //         setTimeout(function(){
-        //             $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
-        //         },500);
-        //     }
-        // }
-        for (var i = 14; i <= 15; i++) {
-            if(scrollPos >= ah[i-1] - windowHeight/1.5){
-                console.log('show');
-                $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
-            }
-        }
     })
 
     
@@ -360,7 +346,7 @@ const groupInfo = {
     "PUBLICITY": [{
         "name": "林雨翾",
         "school": "國立政治大學",
-        "department": "廣告系"
+        "department": "廣告系 / 數位內容學程"
     },
     {
         "name": "林思穎",
@@ -446,8 +432,8 @@ const groupInfo = {
     ,
     {
         "name": "高語萱",
-        "school": "待補",
-        "department": "待補"
+        "school": "國立臺灣大學",
+        "department": "資訊管理研究所"
     }],
 }
 
