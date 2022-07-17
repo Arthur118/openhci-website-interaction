@@ -73,7 +73,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 6,
         func: () => {
             if(activateAnimation){
-                console.log("act 1")
+                // console.log("act 1")
                 gotoGSAP11();
             }
         }
@@ -84,7 +84,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 9,
         func: () => {
             if(activateAnimation){
-                console.log("act 2")
+                // console.log("act 2")
                 gotoGSAP2();
             }
         }
@@ -95,7 +95,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 14,
         func: () => {
             if(activateAnimation){
-                console.log("act 3")
+                // console.log("act 3")
                 gotoGSAP3();
             }
         }
@@ -106,7 +106,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 17,
         func: () => {
             if(activateAnimation){
-                console.log("act 4")
+                // console.log("act 4")
                 gotoGSAP4();
             }
         }
@@ -117,7 +117,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 22,
         func: () => {
             if(activateAnimation){
-                console.log("act 5")
+                // console.log("act 5")
                 gotoGSAP5();
             }
         }
@@ -128,7 +128,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 28,
         func: () => {
             if(activateAnimation){
-                console.log("act 6")
+                // console.log("act 6")
                 gotoGSAP6();
             }
         }
@@ -139,7 +139,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 33,
         func: () => {
             if(activateAnimation){
-                console.log("act 7")
+                // console.log("act 7")
                 gotoGSAP7();
             }
         }
@@ -150,7 +150,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 38,
         func: () => {
             if(activateAnimation){
-                console.log("act 8")
+                // console.log("act 8")
                 gotoGSAP8();
             }
         }
@@ -161,7 +161,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 55,
         func: () => {
             if(activateAnimation){
-                console.log("act 9")
+                // console.log("act 9")
                 gotoGSAP9();
             }
         }
@@ -172,7 +172,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 60,
         func: () => {
             if(activateAnimation){
-                console.log("act 10")
+                // console.log("act 10")
                 gotoGSAP10();
             }
         }
@@ -183,7 +183,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 65,
         func: () => {
             if(activateAnimation){
-                console.log("act 11")
+                // console.log("act 11")
                 gotoGSAP11();
             }
         }
@@ -194,7 +194,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 76,
         func: () => {
             if(activateAnimation){
-                console.log("act 12")
+                // console.log("act 12")
                 gotoGSAP12();
             }
         }
@@ -205,7 +205,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 86,
         func: () => {
             if(activateAnimation){
-                console.log("act 13")
+                // console.log("act 13")
                 gotoGSAP13();
             }
         }
@@ -216,7 +216,7 @@ function main(z_coord, y_coord, activateAnimation) {
         end: 101,
         func: () => {
             if(activateAnimation){
-                console.log("act 14")
+                // console.log("act 14")
                 gotoGSAP14();
             }
         }
