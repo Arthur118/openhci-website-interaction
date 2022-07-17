@@ -1334,5 +1334,5 @@ logo {
   position: absolute;
   top: 1.25%;
   left: 0;
-  z-index: 2;
+  z-index: -1;
 }
