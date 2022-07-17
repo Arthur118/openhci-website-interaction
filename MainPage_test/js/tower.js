@@ -109,6 +109,7 @@ function main(z_coord, y_coord, activateAnimation) {
     function rotate_scroll(){
         if (tower) tower.rotation.y += 0.03;
     }
+    /*
     function reset_Tower(){
         let nowScrollPercent = scrollPercent;
         for(let i=scrollPercent; i>=0; i-=0.1){
@@ -130,10 +131,10 @@ function main(z_coord, y_coord, activateAnimation) {
         }
         scrollPercent = nowScrollPercent;
     }
-
+    */
     return{
         rotate_scroll: rotate_scroll,
-        reset_Tower: reset_Tower
+        //reset_Tower: reset_Tower
     }
 }
 window.scrollTo({ top: 0, behavior: 'smooth' })

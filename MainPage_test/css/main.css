@@ -125,6 +125,11 @@ blue-text {
   margin-top: 16px;
 }
 
+#Apply .box{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 /* 卡片用標題文字 */
 /* t-數字 是文字大小 */
 card-title {
