@@ -1,15 +1,16 @@
 import * as THREE from "three";
 import { GLTFLoader } from 'https://unpkg.com/three@0.142.0/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.142.0/examples/jsm/controls/OrbitControls.js';
+
+const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 7000 );
 function main() {
     const canvas = document.querySelector('#c');
     const renderer = new THREE.WebGLRenderer({canvas});
     renderer.setSize( window.innerWidth, window.innerHeight );
 
-    const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 7000 );
     camera.position.set(850, 600, 850);
     camera.lookAt(new THREE.Vector3(0,0,0))
-    const controls = new OrbitControls( camera, renderer.domElement );
+    // const controls = new OrbitControls( camera, renderer.domElement );
     const scene = new THREE.Scene();
 
     const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
@@ -20,9 +21,10 @@ function main() {
     const loader = new GLTFLoader();
     let tower;
     loader.load( '../tower_origin.gltf', function ( gltf ) {
-        console.log(gltf)
+        // console.log(gltf)
         tower = gltf.scene;
         scene.add( tower );
+        
     }, function(xhr) {
         console.log((xhr.loaded/xhr.total * 100) + "% loaded")
     }, function ( error ) {
@@ -32,14 +34,29 @@ function main() {
     const light = new THREE.DirectionalLight(0xffffff, 0.4)
     light.position.set(2,2,5);
     scene.add(light);
-    controls.update();
+    // controls.update();
 
     function animate() {
-        if (tower) tower.rotation.y += 0.005;
+        if (tower) { 
+            tower.rotation.y += 0.005;
+            // gotoGSAP();
+        };
         requestAnimationFrame(animate);
-        controls.update();
+        // controls.update();
         renderer.render(scene, camera);
     }
     animate();
 }
+function gotoGSAP() {
+    gsap.to(camera.position, {x:400, y:250, z:650, duration: 10, ease: 'power3.inOut' }, '-=0.2');
+    gsap.to(camera.position, {x:400, y:500, z:650, duration: 10, ease: 'power3.inOut' }, '-=0.2');
+}
+
+const button = document.querySelector('#clicker');
+
+button.addEventListener('click', event => {
+  gotoGSAP();
+});
+
 main();
+export { gotoGSAP }
