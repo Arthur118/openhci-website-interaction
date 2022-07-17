@@ -59,7 +59,7 @@ function main(z_coord, y_coord, activateAnimation) {
         start: 0,
         end: 3,
         func: () => {
-            camera.position.set(850, 350, 500);
+            camera.position.set(850, 350, 550);
             camera.lookAt(new THREE.Vector3(0,250,500))
             if(tower) tower.rotation.x = lerp(0, 0.25, scalePercent(0, 10))
         },
@@ -105,6 +105,36 @@ function main(z_coord, y_coord, activateAnimation) {
         renderer.render(scene, camera);
     }
     animate();
+
+    function rotate_scroll(){
+        if (tower) tower.rotation.y += 0.03;
+    }
+    function reset_Tower(){
+        let nowScrollPercent = scrollPercent;
+        for(let i=scrollPercent; i>=0; i-=0.1){
+            scrollPercent = i;
+            animationScripts.forEach((a) => {
+                if (i >= a.start && i < a.end) {
+                    a.func()
+                }
+            })
+        }
+        scrollPercent = 0;
+        for(let i=0; i<nowScrollPercent; i+=0.1){
+            scrollPercent = i;
+            animationScripts.forEach((a) => {
+                if (i >= a.start && i < a.end) {
+                    a.func()
+                }
+            })
+        }
+        scrollPercent = nowScrollPercent;
+    }
+
+    return{
+        rotate_scroll: rotate_scroll,
+        reset_Tower: reset_Tower
+    }
 }
 window.scrollTo({ top: 0, behavior: 'smooth' })
 
