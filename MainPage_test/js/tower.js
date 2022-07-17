@@ -74,7 +74,7 @@ function main(z_coord, y_coord, activateAnimation) {
         func: () => {
             if(activateAnimation){
                 // console.log("act 1")
-                gotoGSAP11();
+                gotoGSAP1();
             }
         }
     })
