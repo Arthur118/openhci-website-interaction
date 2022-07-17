@@ -17,10 +17,12 @@ $(function() {
 //btn open
     $(".panel-collapse").on('show.bs.collapse', function() {
         $(this).siblings('.card_a_close').addClass('active');
+        $(this).siblings('.card_d_close').addClass('active');
      //   console.log("open");
     })
     $('.panel-collapse').on('hide.bs.collapse', function () {
         $(this).siblings('.card_a_close').removeClass('active');
+        $(this).siblings('.card_d_close').removeClass('active');
     //    console.log("hide");
     })
 
