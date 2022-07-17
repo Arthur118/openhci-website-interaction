@@ -71,20 +71,32 @@ $(function() {
         let sc = $(window).scrollTop();
         let card_start = $("#theme").offset().top - window.innerHeight/4;
         //console.log('max height: ' + card_start);
-        if (windowWidth > 768) {
+        if(windowWidth > 768){
             if(sc > card_start){
-                $("#top_navbar").fadeIn(200);
+                $("#top_navbar_computer").fadeIn(200);
                 $("#com-navbar").fadeIn(800);
             }
-            else {
-                $("#com-navbar").fadeOut();
-                $("#top_navbar").fadeOut(800);
+            else{
+                $("#com-navbar").fadeOut(200);
+                $("#top_navbar_computer").fadeOut(800);
             }
         }
+        else{
+            if(sc > card_start){
+                $("#top_navbar_phone").fadeIn(200);
+                $('.menu-control').fadeOut();
+            }
+            else{
+                $('.menu-control').fadeIn();
+                $("#top_navbar_computer").fadeOut(200);
+                $("#top_navbar_phone").fadeOut(200);
+            }
+        }
+        
         // phone main page background
         // only work when head
         if(sc < windowHeight*1.5){
-            let targetOpacity = 0.8;
+            let targetOpacity = 0.7;
             targetOpacity = (1 - sc/(windowHeight*0.8))*targetOpacity;
             $('.main_phone').css({
                 'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')',
@@ -108,7 +120,7 @@ $(function() {
     }, 300);
     //when load reset tower
     window.onbeforeunload = () => {  
-        window.scrollTo(0, 0);  
+        window.scrollTo(0, 0);
     };
 });
 
@@ -128,7 +140,9 @@ for(let i=0; i<sections.length-1; i++) {
 }
 
 function setNavBar(){
-    $("#com-navbar").css('display', 'none');
+    $('.menu-control').css('display', 'none');
+    $('#top_navbar_computer').css('display', 'none');
+    $('#top_navbar_phone').css('display', 'none');
 }
 
 setNavBar();
@@ -164,7 +178,7 @@ const scheduleInfo = {
             "08:00 ~ 09:00": "學員報到",
             "09:00 ~ 10:00": "工具課程： SparkAR",
             "10:00 ~ 11:00": "設計思考工作坊：<br>發想、原型製作、測試",
-            "11:00 ~ 12:00": "工具課程",
+            "11:00 ~ 12:00": "工具課程： Arduino",
             "12:00 ~ 13:00": "午餐",
             "13:00 ~ 15:00": "學員討論",
             "15:00 ~ 17:00": "小發表"
@@ -236,7 +250,7 @@ const groupInfo = {
     {
         "name": "盧姿惠",
         "school": "國立政治大學",
-        "department": "公共行政學系 / 數位內容"
+        "department": "公共行政學系 / 數位內容學程"
     }],
     "PHOTOGRAPHY": [{
         "name": "左雅致",
@@ -335,7 +349,7 @@ const groupInfo = {
     },
     {
         "name": "吳泓玉",
-        "school": "台南應用科大",
+        "school": "台南應用科技大學",
         "department": "服飾設計管理系"
     },
     {

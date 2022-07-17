@@ -13,25 +13,44 @@
     </head>
 
     <body>
-    <!-- navbar for phone-->
-    <nav class="navbar sticky-top navbar-dark navbar-expand-md" id="top_navbar">
+    
+    <!-- top navbar phone -->
+    <nav class="navbar sticky-top navbar-dark navbar-phone"  id="top_navbar_phone">
+        <!-- only appear when phone -->
         <a class="navbar-brand nav-link" href="#home">
+            <img src="image/cyberoasis-clear.png" style="width:40vw; height: auto;"  alt="">
+        </a>
+        <a class="navbar-brand top-button" style="float: right;">
+            <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">前往報名</button>
+        </a>
+    </nav>
+    <!-- top navbar computer -->
+    <nav class="navbar sticky-top navbar-dark navbutton-com" id="top_navbar_computer">
+        <!-- only appear when phone -->
+        <a class="navbar-brand nav-link navbutton-com" href="#home">
             <img src="image/logo.png" alt="">
         </a>
-        <a class="navbar-brand nav-link" href="#home">
+        <a class="navbar-brand nav-link navbutton-com" href="#home">
             <img src="image/cyberoasis.png" alt="" style="filter: drop-shadow(0px 0px 8px #6BAC9A);">
         </a>
         <!-- only appear when computer -->
-        <a class="navbar-brand navbutton-fb">
-            <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">我要報名！</button>
+        <a class="navbar-brand navbutton-com" style="float: right;">
+            <button type="button" class="cta_btn" style="max-height: 100%;" onclick="window.open('https://www.facebook.com/openhci')">我要報名！</button>
         </a>
-        <!-- .navbar-toggler 漢堡式選單按鈕 -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- .navbar-toggler-icon 漢堡式選單Icon -->
-            <img src="image/bar-icon.svg">
-        </button>
+    </nav>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- bottom navbar phone -->
+    <nav class="navbar navbar-dark fixed-bottom navbar-bottom-phone justify-content-end" style="background: none; padding-bottom: 5vh;" id="bottom_navbar">
+        <!-- only appear when phone -->
+        <div class="navbar-brand nav-link navbar-phone menu-control menu-shadow" style="float: right;" href="#home">
+            <p style="font-size: 1em;">MENU</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        style="margin-right: 1rem;">
+        <i class="fa fa-navicon menu-shadow"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link active" id="menu0" href="#theme">工作坊介紹</a>
@@ -55,16 +74,17 @@
                 <a class="nav-link" id="menu6" href="#Group">籌辦團隊</a>
               </li>
               <li class="nav-item">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+                <button class="navbar-toggler in-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
                     <!-- .navbar-toggler-icon 漢堡式選單Icon -->
                     <i class="fas fa-times"></i>
                 </button>
               </li>
             </ul>
           </div>
+        
     </nav>
+
     <div class="back-tower"><canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas></div>
-<!--         <canvas id="tower-canvas" width="100% style="position: fixed;""></canvas>  -->
 
         <div id="home_href"></div>
         <!-- section home-->  
@@ -348,7 +368,7 @@
         <section id = "TAICHI">
             <div class= "box">
                 <div class="box-title T-E">TAICHI X OpenHCI</div>
-                <div class="card_c blue_background">
+                <div class="card_c">
                     <card-title><t-20>About TAICHI’ 22<t-20></card-title>
                     <p>
                         TAICHI 2022（第八屆臺灣人機互動研討會）為臺灣人機互動學會主辦，
@@ -360,7 +380,7 @@
                         旨在探討人工智慧如何貼近真實世界與人性的萬千變化、如何為世界帶來福祉，以及如何實踐永續的未來。
                     </p>
                 </div>
-                <div class="card_c blue_background">
+                <div class="card_c">
                     <card-title><t-20>OpenHCI 與 TAICHI 合作<t-20></card-title>
                     <p>
                         你想要讓自己的作品在台灣人機互動年度盛會TAICHI被看見嗎？<br>
@@ -480,7 +500,7 @@
             <div class= "box">
                 <div class="box-title T-E">How To Apply?</div>
                 <div class="box-title T-C">如何報名？</div>
-                <div class="card_c gray_background">
+                <div class="card_c">
                     <card-title><t-20>Form Introdutcion</t-20><br>
                                 <t-16>報名表單說明</t-16></card-title>
                     <p>包含「基本資料」和「IDcard 製作」兩部份：<br><br>
@@ -489,7 +509,7 @@
                         包含「個人簡歷」、「參與工作坊動機」、「作品集」、「回答問題」，請將檔案附在表單的最後，也請注意檔案連結權限。
                     </p>
                 </div>
-                <div class="card_c gray_background">
+                <div class="card_c">
                     <card-title><t-20>IDcard specification</t-20><br>
                         <t-16>IDcard 格式規範</t-16></card-title>
                     <p>
@@ -503,20 +523,20 @@
             <div class= "box">
                 <div class="box-title T-E">About IDcard</div>
                 <div class="box-title T-C">IDcard製作內容說明</div>
-                <div class="card_c yellow_background">
+                <div class="card_c">
                     <card-title><t-20>第一頁｜個人簡歷</t-20></card-title>
                     <p>請放個人簡歷、說明報名動機，表達格式不限。</p>
                 </div>
-                <div class="card_c yellow_background">
+                <div class="card_c">
                     <card-title><t-20>第二頁｜作品集</t-20></card-title>
                     <p>請放上一個最滿意的作品（研究、專題、設計皆可），可以明確表達作品的脈絡：作品目標、想要傳達的意象、流程、解決什麼問題、如何解決問題等。</p>
                 </div>
-                <div class="card_c yellow_background">
+                <div class="card_c">
                     <card-title><t-20>第三頁｜問題回答</t-20></card-title>
                     <p>請從你的經驗中去發想並回答以下問題，共分為團隊題與分析題兩部分，可透過文字、圖片等形式表達。</p>
                 </div>
 
-                <div class="card_a yellow_background">
+                <div class="card_a">
                     <div class="card_a_close">
                         <card-title id="card_a_title"><t-20>IDcard 問題一<t-20></card-title>
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q1" aria-expanded="true" aria-controls="collapse_IDCard_Q1"></i>
@@ -528,7 +548,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card_a yellow_background ID_Card_Q2">
+                <div class="card_a ID_Card_Q2">
                     <div class="card_a_close">
                         <card-title id="card_a_title"><t-20>IDcard 問題二<t-20></card-title>
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q2" aria-expanded="true" aria-controls="collapse_IDCard_Q2"></i>

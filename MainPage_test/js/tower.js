@@ -5,15 +5,15 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.142.0/examples/jsm/loaders
 
 function main(z_coord, y_coord, activateAnimation) {
     const canvas = document.querySelector('#tower-canvas');
-    const renderer = new THREE.WebGLRenderer({canvas});
-    // const renderer = new THREE.WebGLRenderer({canvas, alpha: true });
+    //const renderer = new THREE.WebGLRenderer({canvas});
+    const renderer = new THREE.WebGLRenderer({canvas, alpha: true });
     renderer.setSize( window.innerWidth, window.innerHeight );
-    // renderer.setClearColor( 0xffffff, 0 );
+    renderer.setClearColor( 0xffffff, 0 );
 
     const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 7000 );
     
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0x1e1e1e );
+    //scene.background = new THREE.Color( 0x1e1e1e );
     
     const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
     scene.add( directionalLight );
