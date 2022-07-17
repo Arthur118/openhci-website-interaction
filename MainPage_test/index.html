@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./image/OpenHCI22_logo.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://kit.fontawesome.com/cbd91073cd.js" crossorigin="anonymous"></script>
@@ -13,25 +14,44 @@
     </head>
 
     <body>
-    <!-- navbar for phone-->
-    <nav class="navbar sticky-top navbar-dark navbar-expand-md" id="top_navbar">
+    
+    <!-- top navbar phone -->
+    <nav class="navbar sticky-top navbar-dark navbar-phone"  id="top_navbar_phone">
+        <!-- only appear when phone -->
         <a class="navbar-brand nav-link" href="#home">
+            <img src="image/cyberoasis-clear.png" style="width:40vw; height: auto;"  alt="">
+        </a>
+        <a class="navbar-brand top-button" style="float: right;">
+            <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">前往報名</button>
+        </a>
+    </nav>
+    <!-- top navbar computer -->
+    <nav class="navbar sticky-top navbar-dark navbutton-com" id="top_navbar_computer">
+        <!-- only appear when phone -->
+        <a class="navbar-brand nav-link navbutton-com" href="#home">
             <img src="image/logo.png" alt="">
         </a>
-        <a class="navbar-brand nav-link" href="#home">
+        <a class="navbar-brand nav-link navbutton-com" href="#home">
             <img src="image/cyberoasis.png" alt="" style="filter: drop-shadow(0px 0px 8px #6BAC9A);">
         </a>
         <!-- only appear when computer -->
-        <a class="navbar-brand navbutton-fb">
-            <button type="button" class="cta_btn" onclick="window.open('https://www.facebook.com/openhci')">我要報名！</button>
+        <a class="navbar-brand navbutton-com" style="float: right;">
+            <button type="button" class="cta_btn" style="max-height: 100%;" onclick="window.open('https://www.facebook.com/openhci')">我要報名！</button>
         </a>
-        <!-- .navbar-toggler 漢堡式選單按鈕 -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- .navbar-toggler-icon 漢堡式選單Icon -->
-            <img src="image/bar-icon.svg">
-        </button>
+    </nav>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- bottom navbar phone -->
+    <nav class="navbar navbar-dark fixed-bottom navbar-bottom-phone justify-content-end" style="background: none; padding-bottom: 5vh;" id="bottom_navbar">
+        <!-- only appear when phone -->
+        <div class="navbar-brand nav-link navbar-phone menu-control menu-shadow" style="float: right;" href="#home">
+            <p style="font-size: 1em;">MENU</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        style="margin-right: 1rem;">
+        <i class="fa fa-navicon menu-shadow"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link active" id="menu0" href="#theme">工作坊介紹</a>
@@ -55,16 +75,17 @@
                 <a class="nav-link" id="menu6" href="#Group">籌辦團隊</a>
               </li>
               <li class="nav-item">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+                <button class="navbar-toggler in-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
                     <!-- .navbar-toggler-icon 漢堡式選單Icon -->
                     <i class="fas fa-times"></i>
                 </button>
               </li>
             </ul>
           </div>
+        
     </nav>
+
     <div class="back-tower"><canvas id="tower-canvas" width="100%" style="position: fixed;"></canvas></div>
-<!--         <canvas id="tower-canvas" width="100% style="position: fixed;""></canvas>  -->
 
         <div id="home_href"></div>
         <!-- section home-->  
@@ -73,7 +94,7 @@
                 <div class="row">
                     <p>第12屆OpenHCI人機互動工作坊</p>
                     <img src="image/cyberoasis.png" class="col-10" style="filter: drop-shadow(0px 0px 24px #6BAC9A);">
-                    <img src="image/date.svg" class="col-10" style="margin-top: 10vh;">
+                    <img src="image/date.svg" class="col-10" style="margin-top: 10vh; max-width: 80%;">
                 </div>
             </div>
             <div class = "box main_title row" style="height: 60vh;">
@@ -130,6 +151,7 @@
 
         <!-- section theme-->
         <section id = "theme">
+            <p>ver. 0609</p>
             <div class= "box">
                 <div class="box-title T-E">Cyberoasis</div>
                 <div class="box-title T-C">主題論述</div>
@@ -252,17 +274,27 @@
                                 <div>
                                     <p>8/13 - 8/14</p>
                                     <ls>
-                                        <li>「人機互動」的先修知識</li>
-                                        <li>設計思考</li>
-                                        <li>基本 Arduino 和 Processing 技術</li>
+                                        <li>聆聽人機互動先修演講</li>
+                                        <li>學習設計思考概念</li>
+                                        <li>了解基本 Arduino 和 Processing 技術</li>
+                                        <li>討論工作坊作品著重面向</li>
                                     </ls>
                                 </div>
+                                <div class="card_f">
+                                    <button type="button" class="cta_btn nav-link" href="#schedule_href">詳細日程表</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card_d">
+                                <card-title>
+                                    <t-20>前置工作坊結束後兩週<t-20>
+                                </card-title>
                                 <div>
-                                    <p>前置工作坊結束後兩週：</p>
                                     <ls>
                                         <li>蒐集資料</li>
-                                        <li>案例分析</li>
-                                        <li>確定專案主題</li>
+                                        <li>分析案例</li>
+                                        <li>確定作品主題</li>
                                     </ls>
                                     <p><p-s>（*過程中需花費較多時間及心力，因此建議先確定自己在這段期間能將重心放在工作坊上，再進行報名喔）</p-s></p>  
                                 </div>
@@ -276,12 +308,11 @@
                                 <div>
                                     <p>8/26 - 8/28</p>
                                     <ls>
-                                        <li>人機互動實戰課程</li>
-                                        <li> HCI 學術 / 業界的講師與學長姐</li>
-                                        <li>與組員合作創造新的點子</li>
-                                        <li>將想法轉化成現實</li>
-                                        <li>最後一日實體展，分享作品成果</li>
-                                        <li>HCI 領域評審，專業講評回饋</li>
+                                        <li>聆聽人機互動實戰演講</li>
+                                        <li>與學 / 業界的學長姐對談</li>
+                                        <li>將作品想法轉化成現實</li>
+                                        <li>與顧問討論作品方向</li>
+                                        <li>在實體展覽分享成果，並獲得專業講評回饋</li>
                                     </ls>
                                 </div>
                                 <div class="card_f">
@@ -303,6 +334,7 @@
                     <ol class="carousel-indicators">
                         <li data-target="#carouselPrograms" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselPrograms" data-slide-to="1"></li>
+                        <li data-target="#carouselPrograms" data-slide-to="2"></li>
                     </ol>
                 </div>
             </div>
@@ -348,7 +380,7 @@
         <section id = "TAICHI">
             <div class= "box">
                 <div class="box-title T-E">TAICHI X OpenHCI</div>
-                <div class="card_c blue_background">
+                <div class="card_c">
                     <card-title><t-20>About TAICHI’ 22<t-20></card-title>
                     <p>
                         TAICHI 2022（第八屆臺灣人機互動研討會）為臺灣人機互動學會主辦，
@@ -360,13 +392,13 @@
                         旨在探討人工智慧如何貼近真實世界與人性的萬千變化、如何為世界帶來福祉，以及如何實踐永續的未來。
                     </p>
                 </div>
-                <div class="card_c blue_background">
+                <div class="card_c">
                     <card-title><t-20>OpenHCI 與 TAICHI 合作<t-20></card-title>
                     <p>
                         你想要讓自己的作品在台灣人機互動年度盛會TAICHI被看見嗎？<br>
                         TAICHI 是台灣人機互動研究領域中最具代表性的研討會，由台灣人機互動學會所舉辦的年度會議，
                         為國內跨領域人機互動學者與社群，提供一個意見交換以及成果交流的年度盛會。<br><br>
-                        OpenHCI 工作坊結束之後，OpenHCI將推薦各組成果作品至TAICHI年會展示，
+                        OpenHCI 工作坊結束之後，<blue-text>OpenHCI將推薦各組成果作品至TAICHI年會展示</blue-text>，
                         除了學員能夠於會議中發表自己的作品、增加曝光度外，也有機會跟眾多國內外HCI、UXD專家交流，
                         不管是向學界、業界前輩取經，或是互相分享經驗，相信對學員的未來求學或工作都有相當大的幫助。
                     </p>
@@ -508,7 +540,7 @@
             <div class= "box">
                 <div class="box-title T-E">How To Apply?</div>
                 <div class="box-title T-C">如何報名？</div>
-                <div class="card_c gray_background">
+                <div class="card_c">
                     <card-title><t-20>Form Introdutcion</t-20><br>
                                 <t-16>報名表單說明</t-16></card-title>
                     <p>包含「基本資料」和「IDcard 製作」兩部份：<br><br>
@@ -517,7 +549,7 @@
                         包含「個人簡歷」、「參與工作坊動機」、「作品集」、「回答問題」，請將檔案附在表單的最後，也請注意檔案連結權限。
                     </p>
                 </div>
-                <div class="card_c gray_background">
+                <div class="card_c">
                     <card-title><t-20>IDcard specification</t-20><br>
                         <t-16>IDcard 格式規範</t-16></card-title>
                     <p>
@@ -531,20 +563,20 @@
             <div class= "box">
                 <div class="box-title T-E">About IDcard</div>
                 <div class="box-title T-C">IDcard製作內容說明</div>
-                <div class="card_c yellow_background">
+                <div class="card_c">
                     <card-title><t-20>第一頁｜個人簡歷</t-20></card-title>
                     <p>請放個人簡歷、說明報名動機，表達格式不限。</p>
                 </div>
-                <div class="card_c yellow_background">
+                <div class="card_c">
                     <card-title><t-20>第二頁｜作品集</t-20></card-title>
                     <p>請放上一個最滿意的作品（研究、專題、設計皆可），可以明確表達作品的脈絡：作品目標、想要傳達的意象、流程、解決什麼問題、如何解決問題等。</p>
                 </div>
-                <div class="card_c yellow_background">
+                <div class="card_c">
                     <card-title><t-20>第三頁｜問題回答</t-20></card-title>
                     <p>請從你的經驗中去發想並回答以下問題，共分為團隊題與分析題兩部分，可透過文字、圖片等形式表達。</p>
                 </div>
 
-                <div class="card_a yellow_background">
+                <div class="card_a">
                     <div class="card_a_close">
                         <card-title id="card_a_title"><t-20>IDcard 問題一<t-20></card-title>
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q1" aria-expanded="true" aria-controls="collapse_IDCard_Q1"></i>
@@ -556,7 +588,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card_a yellow_background ID_Card_Q2">
+                <div class="card_a ID_Card_Q2">
                     <div class="card_a_close">
                         <card-title id="card_a_title"><t-20>IDcard 問題二<t-20></card-title>
                         <i class="fa-solid fa-chevron-down" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapse_IDCard_Q2" aria-expanded="true" aria-controls="collapse_IDCard_Q2"></i>
@@ -1026,7 +1058,7 @@
                 </div>
                 <br>
                 <a href="mailto: program@openhci.com" class="link-light">program@openhci.com</a>
-            </div>>
+            </div>
         </section>
 
         <!-- navbar for computer-->
@@ -1084,6 +1116,8 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
         <!-- three.js -->
         <script async src="https://unpkg.com/es-module-shims@1.5.9/dist/es-module-shims.js"></script>
         <script type="importmap">
