@@ -207,11 +207,11 @@ card-title t-16 {
 }
 
 .carousel-control-next {
-  margin: -15%;
+  margin: -10%;
 }
 
 .carousel-control-prev {
-  margin: -15%;
+  margin: -10%;
 }
 
 .carousel-indicators {
@@ -224,7 +224,7 @@ card-title t-16 {
   width: 0;
   height: 0;
   border: 0;
-  margin: 0 0.5vw;
+  margin: 0 0.7vw;
   border-radius: 16px;
   backdrop-filter: blur(10px);
   color: white;
@@ -318,8 +318,8 @@ white-line {
   padding-inline: 10px;
   display: block;
   /* width: 322px; */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -396,8 +396,8 @@ white-line {
   align-items: flex-start;
   padding: 30px;
   gap: 30px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -421,8 +421,8 @@ white-line {
   padding: 30px;
   gap: 14px;
   /* width: 304px; */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -455,8 +455,8 @@ white-line {
   padding: 40px 30px 30px;
   gap: 30px;
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -475,8 +475,8 @@ white-line {
   padding: 30px;
   gap: 14px;
   /* width: 304px; */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -538,8 +538,8 @@ white-line {
   flex-direction: column;
   /* align-items: flex-start; */
   padding: 25px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -623,7 +623,7 @@ white-line {
   height: 100%;
   position: fixed;
   top: 5vh;
-  right: 5vw;
+  right: 3vw;
   text-align: right;
 }
 
@@ -689,7 +689,8 @@ white-line {
 /* hover */
 .slide-nav-items:hover .slide-text {
   color: #FFF;
-}
+  filter:
+  drop-shadow(0px -3px 5px #269707);}
 
 .slide-nav-items:hover .side-nav-icon {
   opacity: 1;
@@ -700,7 +701,7 @@ white-line {
 .slide-nav-items:hover .slide-text:before {
   visibility: visible;
   width: 120%;
-  box-shadow: 0px 0px 309.96px #49F88C, 0px 0px 177.12px #49F88C, 0px 0px 103.32px #49F88C, 0px 0px 51.66px #49F88C, 0px 0px 14.76px #49F88C, 0px 0px 7.38px #49F88C;
+  box-shadow: 0px 0px 309.96px #49F88C, 0px 0px 177.12px #3d4741, 0px 0px 103.32px #49F88C, 0px 0px 51.66px #49F88C, 0px 0px 14.76px #49F88C, 0px 0px 7.38px #49F88C;
 }
 
 .fa-facebook-f:hover{
@@ -847,6 +848,11 @@ white-line {
     margin-right: 20%;
   }
 
+  #contant .box{
+    margin-right: 10%;
+    margin-bottom: 25vh;
+  }
+
   #home .box {
     margin-top: 10%;
     margin-right: 10%;
@@ -920,7 +926,7 @@ white-line {
     height: 100%;
     position: fixed;
     top: 5vh;
-    right: 5vw;
+    right: 3vw;
     text-align: right;
     z-index: 5;
   }
