@@ -115,7 +115,7 @@ $(function() {
 //scrollmagic init
 let controller = new ScrollMagic.Controller();
 // let sections = [$("#theme_href"),$("#speaker_href"),$("#schedule_href"),$("#Apply_href"),$("#FAQ_href"),$("#Group_href")];
-let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Group"),$("#contant")];
+let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$("#Previous"),$("#Group"),$("#contant")];
 
 
 for(let i=0; i<sections.length-1; i++) {
@@ -431,26 +431,14 @@ const speakerInfo = [{
     "speech_title": "物件召喚的可能世界與纏結美學",
     "speech_description": "資訊科技快速發展的今日，設計物將具備更高的智能，以及更高的自主性與能動性。上世紀模態邏輯學及文學領域中所發展的可能世界理論，將人類所認知的實在(reality)從現實世界(actual world)拓展到可能世界(possible world)。然而，以人類為中心所建構的可能世界，正在面臨新的挑戰：智慧型的物件，如何邀請人類進入非人類中心的可能世界並召喚纏結的經驗。"
 },{
-    "name": "陳彥仰",
-    "title": "臺大資訊工程學系 / 資訊網路與多媒體研究所 | 教授",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-},{
     "name": "何樵暐",
     "title": "Digital Medicine Lab | 負責人",
     "profile_picture": "./image/speaker/profile_default_2.jpeg",
     "speech_title": "敬請期待",
     "speech_description": ""
 },{
-    "name": "楊振甫",
-    "title": "DreamVok / 5% design action | 執行長",
-    "profile_picture": "./image/speaker/profile_default_2.jpeg",
-    "speech_title": "敬請期待",
-    "speech_description": ""
-},{
-    "name": "陳威帆",
-    "title": "Fourdesire | 創辦人暨產品製作人",
+    "name": "更多講者接洽中",
+    "title": " ",
     "profile_picture": "./image/speaker/profile_default_2.jpeg",
     "speech_title": "敬請期待",
     "speech_description": ""
