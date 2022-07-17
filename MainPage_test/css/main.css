@@ -23,9 +23,10 @@ body {
   /* 毛玻璃測試用背景 */
   background-color: #1E1E1E;
   background-image: url("../image/Rectangle.svg");
+  max-height: 100%;
   background-position: center 90%;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
