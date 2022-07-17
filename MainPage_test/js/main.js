@@ -346,7 +346,7 @@ const groupInfo = {
     "PUBLICITY": [{
         "name": "林雨翾",
         "school": "國立政治大學",
-        "department": "廣告系"
+        "department": "廣告系 / 數位內容學程"
     },
     {
         "name": "林思穎",
@@ -432,8 +432,8 @@ const groupInfo = {
     ,
     {
         "name": "高語萱",
-        "school": "待補",
-        "department": "待補"
+        "school": "國立臺灣大學",
+        "department": "資訊管理研究所"
     }],
 }
 
