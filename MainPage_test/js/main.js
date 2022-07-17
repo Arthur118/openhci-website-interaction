@@ -1,13 +1,13 @@
-import {main} from "./tower.js"
+import { main } from "./tower.js"
 
 $(function() {
 // model position control
     let windowSize = window.matchMedia("(min-width: 768px)")
     function modelControl(size) {
         if (size.matches) { // If media query matches
-            main(750, 30);
+            main(750, -20, true);
         } else {
-            main(500, 120);
+            main(485, 0, false);
         }
     }
     modelControl(windowSize) // Call listener function at run time
