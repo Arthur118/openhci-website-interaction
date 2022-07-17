@@ -53,7 +53,7 @@ $(function() {
 
     $(document).scroll(function() {
         $('html,body').scrollLeft(0);
-        mainTower.rotate_scroll();
+        //mainTower.rotate_scroll();
         var scrollPos = $(this).scrollTop();
         for (var i = 1; i <= 16; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
@@ -87,7 +87,8 @@ $(function() {
             let targetOpacity = 0.8;
             targetOpacity = (1 - sc/(windowHeight*0.8))*targetOpacity;
             $('.main_phone').css({
-                'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')'
+                'background-color': 'rgba(0, 0, 0, '+ targetOpacity +')',
+                'box-shadow': 'inset 0px -30px 15px -10px rgba(34,34,34, ' + targetOpacity +')'
             });
         }
     });
@@ -106,9 +107,9 @@ $(function() {
         }
     }, 300);
     //when load reset tower
-    window.onload=function(){
-        mainTower.reset_Tower();
-    }
+    window.onbeforeunload = () => {  
+        window.scrollTo(0, 0);  
+    };
 });
 
 //導航列位置指示
@@ -120,7 +121,7 @@ let sections = [$("#theme"),$("#speaker"),$("#schedule"),$("#Apply"),$("#FAQ"),$
 
 for(let i=0; i<sections.length-1; i++) {
 	let sectionId = sections[i].attr("id");
-	let sectionHeight =  sections[i+1].offset().top - sections[i].offset().top + window.innerHeight/2;
+	let sectionHeight =  sections[i+1].offset().top - sections[i].offset().top;
 	let scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight})
 	.setClassToggle("#menu"+i, "active")
 	.addTo(controller);
@@ -308,11 +309,6 @@ const groupInfo = {
         "department": "數位內容碩士學位學程"
     },
     {
-        "name": "林敬翔",
-        "school": "國立臺灣大學",
-        "department": "工程科學及海洋工程"
-    },
-    {
         "name": "艾奎華",
         "school": "國立陽明交通大學",
         "department": "多媒體工程所"
@@ -421,6 +417,23 @@ const groupInfo = {
         "name": "黃晴",
         "school": "國立清華大學",
         "department": "電機資訊學院學士班"
+    },
+    {
+        "name": "林奕碩",
+        "school": "國立台灣大學",
+        "department": "資訊工程研究所"
+    }
+    ,
+    {
+        "name": "鄭伯俞",
+        "school": "國立陽明交通大學",
+        "department": "資訊工程研究所"
+    }
+    ,
+    {
+        "name": "高語萱",
+        "school": "待補",
+        "department": "待補"
     }],
 }
 
