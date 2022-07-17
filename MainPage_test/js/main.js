@@ -3,12 +3,14 @@ import { main } from "./tower.js"
 $(function() {
 // model position control
     let windowSize = window.matchMedia("(min-width: 768px)")
+    let mainTower;
     function modelControl(size) {
         if (size.matches) { // If media query matches
-            main(750, -20, true);
+            mainTower = main(750, -20, true);
         } else {
-            main(485, 0, false);
+            mainTower = main(485, 0, false);
         }
+        mainTower;
     }
     modelControl(windowSize) // Call listener function at run time
     windowSize.addListener(modelControl);    
@@ -51,6 +53,7 @@ $(function() {
 
     $(document).scroll(function() {
         $('html,body').scrollLeft(0);
+        mainTower.rotate_scroll();
         var scrollPos = $(this).scrollTop();
         for (var i = 1; i <= 16; i++) {
             if(scrollPos >= ah[i-1] - windowHeight/1.5){
@@ -102,6 +105,10 @@ $(function() {
             //console.log("resized!");
         }
     }, 300);
+    //when load reset tower
+    window.onload=function(){
+        mainTower.reset_Tower();
+    }
 });
 
 //導航列位置指示
