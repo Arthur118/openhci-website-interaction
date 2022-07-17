@@ -62,6 +62,13 @@ $(function() {
              //   console.log('show');
             }
         }
+
+        for (var i = 14; i <= 15; i++) {
+            if(scrollPos >= ah[i-1] - windowHeight/1.5){
+                console.log('show');
+                $('section:nth-of-type('+i+') logo').addClass('fade_in_logo');
+            }
+        }
     })
 
     

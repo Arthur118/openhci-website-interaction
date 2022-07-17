@@ -268,6 +268,7 @@ card-title t-16 {
 
 /* carousel值修改 */
 #carouselPrograms {
+  margin-top: 26px;
   display: none;
 }
 
@@ -275,13 +276,13 @@ card-title t-16 {
   display: none;
 }
 
-.carousel-control-next {
+/* .carousel-control-next {
   margin: -12%;
 }
 
 .carousel-control-prev {
   margin: -12%;
-}
+} */
 
 .carousel-indicators {
   margin: 0;
@@ -313,6 +314,7 @@ card-title t-16 {
 }
 
 #carouselSpeaker {
+  margin-top: 26px;
   display: none;
 }
 
@@ -471,8 +473,8 @@ white-line {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   border-right: 2px solid rgba(255, 255, 255, 0.3);
-
   background: linear-gradient(326.76deg, rgba(85, 192, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
+
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -496,7 +498,6 @@ white-line {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   border-right: 2px solid rgba(255, 255, 255, 0.3);
-
   background: linear-gradient(326.76deg, rgba(85, 192, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -550,7 +551,6 @@ white-line {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   border-right: 2px solid rgba(255, 255, 255, 0.3);
-
   background: linear-gradient(326.76deg, rgba(85, 192, 207, 0.3) -0.86%, rgba(217, 217, 217, 0) 227.6%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -656,24 +656,38 @@ white-line {
 }
 
 #organizer .card_e {
-  background: radial-gradient(circle at 30% 60%,
+  /* background: radial-gradient(circle at 30% 60%,
       rgba(200, 200, 200, 0.6) 0%, rgba(200, 200, 200, 0.5) 15%,
       rgba(200, 200, 200, 0.25) 30%, rgba(200, 200, 200, 0.2) 35%, rgba(200, 200, 200, 0.1) 40%, rgba(200, 200, 200, 0) 50%,
-      rgba(200, 200, 200, 0) 75%, rgba(200, 200, 200, 0) 100%, rgba(0, 0, 0, 0.2) 110%, rgba(0, 0, 0, 0.5) 130%);
+      rgba(200, 200, 200, 0) 75%, rgba(200, 200, 200, 0) 100%, rgba(0, 0, 0, 0.2) 110%, rgba(0, 0, 0, 0.5) 130%); */
   /* background: radial-gradient(circle at 25% 55%,
       rgba(200, 200, 200, 0.9) 0%, rgba(200, 200, 200, 0.8) 15%,
       rgba(200, 200, 200, 0.5) 30%, rgba(200, 200, 200, 0.3) 60%, 
       rgba(200, 200, 200, 0) 75%, rgba(200, 200, 200, 0) 100%); */
-  backdrop-filter: blur(3px);
-  padding-bottom: 10%;
+  /* backdrop-filter: blur(3px); */
+  background:linear-gradient(rgba(200, 200, 200, 0) 0%,rgba(200, 200, 200, 0.5) 30%,
+  rgba(200, 200, 200, 0.5) 50%,rgba(200, 200, 200, 0.5) 70%
+  ) ;
+  backdrop-filter: unset;
+  padding-bottom: 0%;
+}
+
+#Sponsors{
+  padding-top: 0%;
 }
 
 #Sponsors .card_e {
-  background: radial-gradient(ellipse at 40% 50%,
+  /* background: radial-gradient(ellipse at 40% 50%,
       rgba(200, 200, 200, 0.6) 0%, rgba(200, 200, 200, 0.55) 15%, rgba(200, 200, 200, 0.45) 20%,
       rgba(200, 200, 200, 0.25) 35%, rgba(200, 200, 200, 0.1) 50%, rgba(200, 200, 200, 0.05) 60%,
-      rgba(200, 200, 200, 0) 75%, rgba(200, 200, 200, 0) 100%);
-  backdrop-filter: blur(3px);
+      rgba(200, 200, 200, 0) 75%, rgba(200, 200, 200, 0) 100%); */
+
+  /* backdrop-filter: blur(3px); */
+  background:linear-gradient(
+    rgba(200, 200, 200, 0.5) 50%,rgba(200, 200, 200, 0.5) 70%,
+    rgba(200, 200, 200, 0.4) 80%,rgba(200, 200, 200, 0) 100%,rgba(200, 200, 200, 0) 120%) ;
+  backdrop-filter: unset;
+
   padding-bottom: 10%;
 }
 
@@ -701,6 +715,7 @@ white-line {
   float: left;
   margin-right: 0;
 }
+
 .navbutton-phone {
   margin-right: 30px;
 }
@@ -751,11 +766,20 @@ white-line {
   width: 120%;
 }
 
+#organizer .box {
+  margin-bottom: 0;
+  padding-bottom: 10%;
+}
+
+#Sponsors .box{
+  margin-top: 0;
+}
+
 /* hover */
 .slide-nav-items:hover .slide-text {
   color: #FFF;
   filter:
-    drop-shadow(0px -3px 5px #269707);
+  drop-shadow(0px -3px 5px #269707);
 }
 
 .slide-nav-items:hover .side-nav-icon {
@@ -774,12 +798,10 @@ white-line {
   filter:
     drop-shadow(0px 0px 2px #269707) drop-shadow(0px 0px 8.54px #269707);
 }
-
 .fa-youtube:hover {
   filter:
     drop-shadow(0px 0px 2px #269707) drop-shadow(0px 0px 8.54px #269707);
 }
-
 .link-light:hover {
   color: white;
   filter:
@@ -922,7 +944,7 @@ white-line {
     margin-right: 20%;
   }
 
-  #contant .box {
+  #contant .box{
     margin-right: 10%;
     margin-bottom: 25vh;
   }
@@ -947,9 +969,9 @@ white-line {
   }
 
   #carouselPrograms .card_d {
-    width: auto;
+    width: 30vw;
     max-width: 780px;
-    height: 420px;
+    height: 40vh;
     margin: auto;
   }
 
@@ -958,7 +980,7 @@ white-line {
   }
 
   .card_b {
-    width: 60vw;
+    width: 30vw;
     max-width: 780px;
     height: 610px;
     margin: auto;
@@ -986,7 +1008,6 @@ white-line {
     display: block;
     clear: right;
   }
-
   #Previous .card_a_close {
     padding-top: 0;
     float: right;
@@ -1067,6 +1088,7 @@ white-line {
 
   #carouselSchedule {
     display: block;
+    margin-top: 26px;
   }
 
   #Speaker_phone {
@@ -1082,26 +1104,31 @@ white-line {
   }
 
   #speaker .carousel-inner .carousel-item .card_d {
-    width: auto;
+    width: 30vw;
     max-width: 780px;
-    height: 520px;
+    height: 550px;
     margin: auto;
+  }
+
+  #organizer{
+    padding-top: 10%;
   }
 
   #organizer .card_e {
     width: 100%;
     align-self: flex-end;
     float: right;
+    padding-top: 10%;
     /* background: radial-gradient(circle at 45% 60%,
         rgba(200, 200, 200, 0.9) 0%, rgba(200, 200, 200, 0.7) 10%,
         rgba(200, 200, 200, 0.5) 25%, rgba(200, 200, 200, 0.2) 50%, 
         rgba(200, 200, 200, 0) 60%, rgba(200, 200, 200, 0) 100%); */
-    background: linear-gradient(180deg, rgba(200, 200, 200, 0) 0%,
-        rgba(200, 200, 200, 0) 30%, rgba(200, 200, 200, 0.4) 50%,
-        rgba(200, 200, 200, 0.5) 65%, rgba(200, 200, 200, 0.4) 70%,
-        rgba(200, 200, 200, 0.28) 75%, rgba(200, 200, 200, 0.1) 90%,
-        rgba(200, 200, 200, 0) 100%);
-    backdrop-filter: blur(3px);
+        
+      background:linear-gradient(rgba(200, 200, 200, 0) 0%,rgba(200, 200, 200, 0.5) 30%,
+      rgba(200, 200, 200, 0.5) 50%,rgba(200, 200, 200, 0.5) 70%
+      ) ;
+      backdrop-filter: unset;
+      padding-bottom: 0%;
   }
 
   #organizer .box {
@@ -1112,11 +1139,15 @@ white-line {
     width: 100%;
     align-self: flex-end;
     float: right;
-    background: linear-gradient(180deg, rgba(200, 200, 200, 0) 0%,
+    /* background: linear-gradient(180deg, rgba(200, 200, 200, 0) 0%,
         rgba(200, 200, 200, 0) 30%, rgba(200, 200, 200, 0.1) 50%,
         rgba(200, 200, 200, 0.15) 60%, rgba(200, 200, 200, 0.2) 70%,
-        rgba(200, 200, 200, 0.1) 85%, rgba(200, 200, 200, 0) 100%);
-    backdrop-filter: blur(4px);
+        rgba(200, 200, 200, 0.1) 85%, rgba(200, 200, 200, 0) 100%); */
+    background:linear-gradient(
+    rgba(200, 200, 200, 0.5) 50%,rgba(200, 200, 200, 0.5) 70%,
+    rgba(200, 200, 200, 0.4) 80%,rgba(200, 200, 200, 0) 100%,rgba(200, 200, 200, 0) 120%) ;
+    /* backdrop-filter: blur(4px); */
+    backdrop-filter: unset;
   }
 
   .T-E {
@@ -1156,11 +1187,40 @@ section:nth-of-type(16) {
   /* background-color: #fff; */
 }
 
+section:nth-of-type(14) {
+  opacity: 1;
+  transform: translateX(0%);
+  /* background-color: #fff; */
+}
+section:nth-of-type(15) {
+  opacity: 1;
+  transform: translateX(0%);
+  /* background-color: #fff; */
+}
+
 .fade_in {
   position: relative !important;
   opacity: 1;
   transform: translateX(0%);
   transition: opacity 500ms ease-in, transform 500ms ease-out;
+}
+
+/* section:nth-of-type(15) logo{
+  background-color: #fff;
+} */
+
+logo{
+  opacity: 0;
+}
+/* logo:nth-child(){
+  background-color: #fff;
+} */
+
+.fade_in_logo {
+  position: relative !important;
+  opacity: 1;
+  animation-duration: 2s;
+  transition: opacity 2000ms ease-in;
 }
 
 /* Tower canvas 設定 */
