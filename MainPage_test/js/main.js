@@ -594,8 +594,8 @@ function speaker_information_insertion(type) {
     }
 }
 
-speaker_information_insertion("phone");
-speaker_information_insertion("desktop");
+// speaker_information_insertion("phone");
+// speaker_information_insertion("desktop");
 
 const previousWork = [{
     "name": "Eggy",
