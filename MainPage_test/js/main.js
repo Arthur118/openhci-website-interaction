@@ -485,10 +485,10 @@ function group_information_insertion() {
     const groupSection = document.querySelector("#Group .box");
     let member = ``;
     for (const [key, value] of Object.entries(groupInfo)) {
-        let content = `<div class="card_a">
+        let content = `<div class="card_a" data-toggle="collapse" data-parent="#accordion" href="#collapse_${key}" aria-expanded="true" aria-controls="collapse_${key}">
                     <div class="card_a_close">
                         <card-title id="card_a_title"><t-20>${key}<t-20></card-title>
-                        <i class="fa-solid fa-chevron-down" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_${key}" aria-expanded="true" aria-controls="collapse_${key}"></i>
+                        <i class="fa-solid fa-chevron-down" role="button" ></i>
                     </div>
                     <div id="collapse_${key}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="width: 100%;">
                         <div class="row group_member">`;

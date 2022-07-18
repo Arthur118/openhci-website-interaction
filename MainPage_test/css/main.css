@@ -476,6 +476,9 @@ white-line {
 .card_d_close.active i {
   transform: rotate(180deg);
 }
+.card_a_close.active i {
+  transform: rotate(180deg);
+}
 
 .card_a_close.active card-title {
   color: #56FAFB;
