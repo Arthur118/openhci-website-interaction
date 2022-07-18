@@ -17,11 +17,10 @@ html {
 }
 
 body {
-  background-color: #1E1E1E;
+  background-color: #47575e;
   display: flex;
   flex-direction: column;
   /* 毛玻璃測試用背景 */
-  background-color: #1E1E1E;
   /*  background-image: url("../image/Rectangle.svg"); 
   height: 100%;
   background-position: center bottom;
