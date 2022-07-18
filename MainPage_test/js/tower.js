@@ -37,8 +37,7 @@ function main(z_coord, y_coord, activateAnimation) {
     const light = new THREE.DirectionalLight(0xffffff, 0.4)
     light.position.set(2,2,5);
     scene.add(light);
-    camera.position.set(850, 350, 550)
-    camera.lookAt(new THREE.Vector3(0,250,500))
+    
     // // Animation section
     function lerp(x, y, a){
         return (1 - a) * x + a * y
