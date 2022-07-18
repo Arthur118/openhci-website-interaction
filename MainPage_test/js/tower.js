@@ -21,7 +21,7 @@ function main(z_coord, y_coord, activateAnimation) {
     // Tower model loading section
     const loader = new GLTFLoader();
     let tower;
-    loader.load( '../tower_origin.gltf', function ( gltf ) {
+    loader.load( './model/tower_origin.gltf', function ( gltf ) {
         // console.log(gltf)
         tower = gltf.scene;
         tower.position.setZ(z_coord)
